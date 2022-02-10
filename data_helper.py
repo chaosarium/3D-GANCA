@@ -1,3 +1,4 @@
+# %%
 import numpy as np
 from einops import rearrange
 import pandas as pd
@@ -5,6 +6,8 @@ from tqdm.notebook import tqdm
 DATA_DIR = "dataset/house_data/houses"
 WORLD_SIZE = 32
 import math
+
+# %%
 
 def rearrange_sample(house):
     # this rearranges the training sample into an x y z m shape

@@ -1,12 +1,10 @@
 dataset/house_data.tar.gz
 dataset/house_data
+dataset/minecraft_worlds
 dataset/matplotlib notebook.ipynb
-.ipynb_checkpoints/default-2be90777-5498-49a6-a5ce-f77284a5d965-checkpoint.ipynb
-.ipynb_checkpoints/default-646af460-ba5b-4939-996f-be8a75e29d09-checkpoint.ipynb
+.ipynb_checkpoints
 .vscode/settings.json
 .gitignore
-dataset/.ipynb_checkpoints/training_wraggler-297c0933-6868-4623-9d4d-87555ac04d6f-checkpoint.ipynb
-dataset/.ipynb_checkpoints/training_wraggler-b9be4954-7b80-4eee-a3f7-5aa710924ec3-checkpoint.ipynb
-dataset/.ipynb_checkpoints/training_wraggler-fb98460b-d3c9-48db-a971-69c32dd619de-checkpoint.ipynb
-__pycache__/data_helper.cpython-39.pyc
-__pycache__/visualise_helper.cpython-39.pyc
+dataset/.ipynb_checkpoints
+__pycache__
+runs
