@@ -1,0 +1,1325 @@
+name	item id	legacy item id	numerical id
+air	minecraft:air		
+stone	minecraft:stone		1
+granite	minecraft:granite	minecraft:stone	1:1
+polished granite	minecraft:polished_granite	minecraft:stone	1:2
+diorite	minecraft:diorite	minecraft:stone	1:3
+polished diorite	minecraft:polished_diorite	minecraft:stone	1:4
+andesite	minecraft:andesite	minecraft:stone	1:5
+polished andesite	minecraft:polished_andesite	minecraft:stone	1:6
+grass block	minecraft:grass_block	minecraft:grass	2
+dirt	minecraft:dirt		3
+coarse dirt	minecraft:coarse_dirt	minecraft:dirt	3:1
+podzol	minecraft:podzol	minecraft:dirt	3:2
+cobblestone	minecraft:cobblestone		4
+oak planks	minecraft:oak_planks	minecraft:planks	5
+spruce planks	minecraft:spruce_planks	minecraft:planks	5:1
+birch planks	minecraft:birch_planks	minecraft:planks	5:2
+jungle planks	minecraft:jungle_planks	minecraft:planks	5:3
+acacia planks	minecraft:acacia_planks	minecraft:planks	5:4
+dark oak planks	minecraft:dark_oak_planks	minecraft:planks	5:5
+oak sapling	minecraft:oak_sapling	minecraft:sapling	6
+spruce sapling	minecraft:spruce_sapling	minecraft:sapling	6:1
+birch sapling	minecraft:birch_sapling	minecraft:sapling	6:2
+jungle sapling	minecraft:jungle_sapling	minecraft:sapling	6:3
+acacia sapling	minecraft:acacia_sapling	minecraft:sapling	6:4
+dark oak sapling	minecraft:dark_oak_sapling	minecraft:sapling	6:5
+bedrock	minecraft:bedrock		7
+sand	minecraft:sand		12
+red sand	minecraft:red_sand	minecraft:sand	12:1
+gravel	minecraft:gravel		13
+gold ore	minecraft:gold_ore		14
+iron ore	minecraft:iron_ore		15
+coal ore	minecraft:coal_ore		16
+oak log	minecraft:oak_log	minecraft:log	17
+spruce log	minecraft:spruce_log	minecraft:log	17:1
+birch log	minecraft:birch_log	minecraft:log	17:2
+jungle log	minecraft:jungle_log	minecraft:log	17:3
+acacia log	minecraft:acacia_log	minecraft:log2	162
+dark oak log	minecraft:dark_oak_log	minecraft:log2	162:1
+stripped oak log	minecraft:stripped_oak_log		
+stripped spruce log	minecraft:stripped_spruce_log		
+stripped birch log	minecraft:stripped_birch_log		
+stripped jungle log	minecraft:stripped_jungle_log		
+stripped acacia log	minecraft:stripped_acacia_log		
+stripped dark oak log	minecraft:stripped_dark_oak_log		
+stripped oak wood	minecraft:stripped_oak_wood	minecraft:stripped_oak_bark	
+stripped spruce wood	minecraft:stripped_spruce_wood	minecraft:stripped_spruce_bark	
+stripped birch wood	minecraft:stripped_birch_wood	minecraft:stripped_birch_bark	
+stripped jungle wood	minecraft:stripped_jungle_wood	minecraft:stripped_jungle_bark	
+stripped acacia wood	minecraft:stripped_acacia_wood	minecraft:stripped_acacia_bark	
+stripped dark oak wood	minecraft:stripped_dark_oak_wood	minecraft:stripped_dark_oak_bark	
+oak wood	minecraft:oak_wood	minecraft:oak_bark	
+spruce wood	minecraft:spruce_wood	minecraft:spruce_bark	
+birch wood	minecraft:birch_wood	minecraft:birch_bark	
+jungle wood	minecraft:jungle_wood	minecraft:jungle_bark	
+acacia wood	minecraft:acacia_wood	minecraft:acacia_bark	
+dark oak wood	minecraft:dark_oak_wood	minecraft:dark_oak_bark	
+oak leaves	minecraft:oak_leaves	minecraft:leaves	18
+spruce leaves	minecraft:spruce_leaves	minecraft:leaves	18:1
+birch leaves	minecraft:birch_leaves	minecraft:leaves	18:2
+jungle leaves	minecraft:jungle_leaves	minecraft:leaves	18:3
+acacia leaves	minecraft:acacia_leaves	minecraft:leaves2	161
+dark oak leaves	minecraft:dark_oak_leaves	minecraft:leaves2	161:1
+sponge	minecraft:sponge		19
+wet sponge	minecraft:wet_sponge	minecraft:sponge	19:1
+glass	minecraft:glass		20
+lapis lazuli ore	minecraft:lapis_ore		21
+lapis lazuli block	minecraft:lapis_block		22
+dispenser	minecraft:dispenser		23
+sandstone	minecraft:sandstone		24
+chiseled sandstone	minecraft:chiseled_sandstone	minecraft:sandstone	24:1
+cut sandstone	minecraft:cut_sandstone	minecraft:sandstone	24:2
+note block	minecraft:note_block	minecraft:noteblock	25
+powered rail	minecraft:powered_rail	minecraft:golden_rail	27
+detector rail	minecraft:detector_rail		28
+sticky piston	minecraft:sticky_piston		29
+cobweb	minecraft:cobweb		30
+grass	minecraft:grass		
+fern	minecraft:fern	minecraft:tallgrass	31:2
+dead bush	minecraft:dead_bush	minecraft:deadbush	32
+seagrass	minecraft:seagrass		
+sea pickle	minecraft:sea_pickle		
+piston	minecraft:piston		33
+white wool	minecraft:white_wool	minecraft:wool	35
+orange wool	minecraft:orange_wool	minecraft:wool	35:1
+magenta wool	minecraft:magenta_wool	minecraft:wool	35:2
+light blue wool	minecraft:light_blue_wool	minecraft:wool	35:3
+yellow wool	minecraft:yellow_wool	minecraft:wool	35:4
+lime wool	minecraft:lime_wool	minecraft:wool	35:5
+pink wool	minecraft:pink_wool	minecraft:wool	35:6
+gray wool	minecraft:gray_wool	minecraft:wool	35:7
+light gray wool	minecraft:light_gray_wool	minecraft:wool	35:8
+cyan wool	minecraft:cyan_wool	minecraft:wool	35:9
+purple wool	minecraft:purple_wool	minecraft:wool	35:10
+blue wool	minecraft:blue_wool	minecraft:wool	35:11
+brown wool	minecraft:brown_wool	minecraft:wool	35:12
+green wool	minecraft:green_wool	minecraft:wool	35:13
+red wool	minecraft:red_wool	minecraft:wool	35:14
+black wool	minecraft:black_wool	minecraft:wool	35:15
+dandelion	minecraft:dandelion	minecraft:yellow_flower	37
+poppy	minecraft:poppy	minecraft:red_flower	38
+blue orchid	minecraft:blue_orchid	minecraft:red_flower	38:1
+allium	minecraft:allium	minecraft:red_flower	38:2
+azure bluet	minecraft:azure_bluet	minecraft:red_flower	38:3
+red tulip	minecraft:red_tulip	minecraft:red_flower	38:4
+orange tulip	minecraft:orange_tulip	minecraft:red_flower	38:5
+white tulip	minecraft:white_tulip	minecraft:red_flower	38:6
+pink tulip	minecraft:pink_tulip	minecraft:red_flower	38:7
+oxeye daisy	minecraft:oxeye_daisy	minecraft:red_flower	38:8
+brown mushroom	minecraft:brown_mushroom		39
+red mushroom	minecraft:red_mushroom		40
+block of gold	minecraft:gold_block		41
+block of iron	minecraft:iron_block		42
+oak slab	minecraft:oak_slab	minecraft:wooden_slab	126
+spruce slab	minecraft:spruce_slab	minecraft:wooden_slab	126:1
+birch slab	minecraft:birch_slab	minecraft:wooden_slab	126:2
+jungle slab	minecraft:jungle_slab	minecraft:wooden_slab	126:3
+acacia slab	minecraft:acacia_slab	minecraft:wooden_slab	126:4
+dark oak slab	minecraft:dark_oak_slab	minecraft:wooden_slab	126:5
+stone slab	minecraft:stone_slab		44:2
+sandstone slab	minecraft:sandstone_slab	minecraft:stone_slab	44:1
+petrified oak slab	minecraft:petrified_oak_slab		
+cobblestone slab	minecraft:cobblestone_slab	minecraft:stone_slab	44:3
+brick slab	minecraft:brick_slab	minecraft:stone_slab	44:4
+stone brick slab	minecraft:stone_brick_slab	minecraft:stone_slab	44:5
+nether brick slab	minecraft:nether_brick_slab	minecraft:stone_slab	44:6
+quartz slab	minecraft:quartz_slab	minecraft:stone_slab	44:7
+red sandstone slab	minecraft:red_sandstone_slab	minecraft:stone_slab2	182
+purpur slab	minecraft:purpur_slab		205
+prismarine slab	minecraft:prismarine_slab		
+prismarine brick slab	minecraft:prismarine_brick_slab		
+dark prismarine slab	minecraft:dark_prismarine_slab		
+smooth quartz	minecraft:smooth_quartz	minecraft:double_stone_slab	43:7
+smooth red sandstone	minecraft:smooth_red_sandstone		
+smooth sandstone	minecraft:smooth_sandstone		
+smooth stone	minecraft:smooth_stone	minecraft:double_stone_slab	43:8
+bricks	minecraft:bricks	minecraft:brick_block	45
+tnt	minecraft:tnt		46
+bookshelf	minecraft:bookshelf		47
+mossy cobblestone	minecraft:mossy_cobblestone		48
+obsidian	minecraft:obsidian		49
+torch	minecraft:torch		50
+end rod	minecraft:end_rod		198
+chorus plant	minecraft:chorus_plant		199
+chorus flower	minecraft:chorus_flower		200
+purpur block	minecraft:purpur_block		201
+purpur pillar	minecraft:purpur_pillar		202
+purpur stairs	minecraft:purpur_stairs		203
+spawner	minecraft:spawner	minecraft:mob_spawner	52
+oak stairs	minecraft:oak_stairs		53
+chest	minecraft:chest		54
+diamond ore	minecraft:diamond_ore		56
+block of diamond	minecraft:diamond_block		57
+crafting table	minecraft:crafting_table		58
+farmland	minecraft:farmland	minecraft:wheat	60
+furnace	minecraft:furnace		61
+ladder	minecraft:ladder		65
+rail	minecraft:rail		66
+cobblestone stairs	minecraft:cobblestone_stairs	minecraft:stone_stairs	67
+lever	minecraft:lever		69
+stone pressure plate	minecraft:stone_pressure_plate		70
+oak pressure plate	minecraft:oak_pressure_plate	minecraft:wooden_pressure_plate	72
+spruce pressure plate	minecraft:spruce_pressure_plate		
+birch pressure plate	minecraft:birch_pressure_plate		
+jungle pressure plate	minecraft:jungle_pressure_plate		
+acacia pressure plate	minecraft:acacia_pressure_plate		
+dark oak pressure plate	minecraft:dark_oak_pressure_plate		
+redstone ore	minecraft:redstone_ore		73
+redstone torch	minecraft:redstone_torch	minecraft:lit_redstone_torch	76
+stone button	minecraft:stone_button		77
+snow	minecraft:snow	minecraft:snow_layer	78
+ice	minecraft:ice		79
+snow block	minecraft:snow_block	minecraft:snow	80
+cactus	minecraft:cactus		81
+clay	minecraft:clay		337
+jukebox	minecraft:jukebox		84
+oak fence	minecraft:oak_fence	minecraft:fence	85
+spruce fence	minecraft:spruce_fence		188
+birch fence	minecraft:birch_fence		189
+jungle fence	minecraft:jungle_fence		190
+acacia fence	minecraft:acacia_fence		192
+dark oak fence	minecraft:dark_oak_fence		191
+pumpkin	minecraft:pumpkin		86
+carved pumpkin	minecraft:carved_pumpkin	minecraft:pumpkin	
+netherrack	minecraft:netherrack		87
+soul sand	minecraft:soul_sand		88
+glowstone	minecraft:glowstone		89
+jack o'lantern	minecraft:jack_o_lantern	minecraft:lit_pumpkin	91
+oak trapdoor	minecraft:oak_trapdoor	minecraft:trapdoor	96
+spruce trapdoor	minecraft:spruce_trapdoor		
+birch trapdoor	minecraft:birch_trapdoor		
+jungle trapdoor	minecraft:jungle_trapdoor		
+acacia trapdoor	minecraft:acacia_trapdoor		
+dark oak trapdoor	minecraft:dark_oak_trapdoor		
+infested stone	minecraft:infested_stone	minecraft:monster_egg	97
+infested cobblestone	minecraft:infested_cobblestone	minecraft:monster_egg	97:1
+infested stone bricks	minecraft:infested_stone_bricks	minecraft:monster_egg	97:2
+infested mossy stone bricks	minecraft:infested_mossy_stone_bricks	minecraft:monster_egg	97:3
+infested cracked stone bricks	minecraft:infested_cracked_stone_bricks	minecraft:monster_egg	97:4
+infested chiseled stone bricks	minecraft:infested_chiseled_stone_bricks	minecraft:monster_egg	97:5
+stone bricks	minecraft:stone_bricks	minecraft:stonebrick	98
+mossy stone bricks	minecraft:mossy_stone_bricks	minecraft:stonebrick	98:1
+cracked stone bricks	minecraft:cracked_stone_bricks	minecraft:stonebrick	98:2
+chiseled stone bricks	minecraft:chiseled_stone_bricks	minecraft:stonebrick	98:3
+brown mushroom block	minecraft:brown_mushroom_block		99
+red mushroom block	minecraft:red_mushroom_block		100
+mushroom stem	minecraft:mushroom_stem	minecraft:red_mushroom_block	
+iron bars	minecraft:iron_bars		101
+glass pane	minecraft:glass_pane		102
+melon	minecraft:melon	minecraft:melon_block	103
+vines	minecraft:vine		106
+oak fence gate	minecraft:oak_fence_gate	minecraft:fence_gate	107
+spruce fence gate	minecraft:spruce_fence_gate		183
+birch fence gate	minecraft:birch_fence_gate		184
+jungle fence gate	minecraft:jungle_fence_gate		185
+acacia fence gate	minecraft:acacia_fence_gate		187
+dark oak fence gate	minecraft:dark_oak_fence_gate		186
+brick stairs	minecraft:brick_stairs		108
+stone brick stairs	minecraft:stone_brick_stairs		109
+mycelium	minecraft:mycelium		110
+lily pad	minecraft:lily_pad	minecraft:waterlily	111
+nether bricks	minecraft:nether_bricks	minecraft:nether_brick	112
+nether brick fence	minecraft:nether_brick_fence		113
+nether brick stairs	minecraft:nether_brick_stairs		114
+enchanting table	minecraft:enchanting_table		116
+end portal frame	minecraft:end_portal_frame		120
+end stone	minecraft:end_stone		121
+end stone bricks	minecraft:end_stone_bricks	minecraft:end_bricks	206
+dragon egg	minecraft:dragon_egg		122
+redstone lamp	minecraft:redstone_lamp		123
+sandstone stairs	minecraft:sandstone_stairs		128
+emerald ore	minecraft:emerald_ore		129
+ender chest	minecraft:ender_chest		130
+tripwire hook	minecraft:tripwire_hook		131
+block of emerald	minecraft:emerald_block		133
+spruce stairs	minecraft:spruce_stairs		134
+birch stairs	minecraft:birch_stairs		135
+jungle stairs	minecraft:jungle_stairs		136
+command block	minecraft:command_block		137
+beacon	minecraft:beacon		138
+cobblestone wall	minecraft:cobblestone_wall		139
+mossy cobblestone wall	minecraft:mossy_cobblestone_wall	minecraft:cobblestone_wall	139:1
+oak button	minecraft:oak_button	minecraft:wooden_button	143
+spruce button	minecraft:spruce_button		
+birch button	minecraft:birch_button		
+jungle button	minecraft:jungle_button		
+acacia button	minecraft:acacia_button		
+dark oak button	minecraft:dark_oak_button		
+anvil	minecraft:anvil		145
+chipped anvil	minecraft:chipped_anvil	minecraft:anvil	145:1
+damaged anvil	minecraft:damaged_anvil	minecraft:anvil	145:2
+trapped chest	minecraft:trapped_chest		146
+light weighted pressure plate	minecraft:light_weighted_pressure_plate		147
+heavy weighted pressure plate	minecraft:heavy_weighted_pressure_plate		148
+daylight detector	minecraft:daylight_detector		151
+block of redstone	minecraft:redstone_block		152
+nether quartz ore	minecraft:nether_quartz_ore	minecraft:quartz_ore	153
+hopper	minecraft:hopper		154
+chiseled quartz block	minecraft:chiseled_quartz_block	minecraft:quartz	155:1
+block of quartz	minecraft:quartz_block	minecraft:quartz	155
+quartz pillar	minecraft:quartz_pillar	minecraft:quartz	155:2
+quartz stairs	minecraft:quartz_stairs		156
+activator rail	minecraft:activator_rail		157
+dropper	minecraft:dropper		158
+white terracotta	minecraft:white_terracotta	minecraft:stained_hardened_clay	159
+orange terracotta	minecraft:orange_terracotta	minecraft:stained_hardened_clay	159:1
+magenta terracotta	minecraft:magenta_terracotta	minecraft:stained_hardened_clay	159:2
+light blue terracotta	minecraft:light_blue_terracotta	minecraft:stained_hardened_clay	159:3
+yellow terracotta	minecraft:yellow_terracotta	minecraft:stained_hardened_clay	159:4
+lime terracotta	minecraft:lime_terracotta	minecraft:stained_hardened_clay	159:5
+pink terracotta	minecraft:pink_terracotta	minecraft:stained_hardened_clay	159:6
+gray terracotta	minecraft:gray_terracotta	minecraft:stained_hardened_clay	159:7
+light gray terracotta	minecraft:light_gray_terracotta	minecraft:stained_hardened_clay	159:8
+cyan terracotta	minecraft:cyan_terracotta	minecraft:stained_hardened_clay	159:9
+purple terracotta	minecraft:purple_terracotta	minecraft:stained_hardened_clay	159:10
+blue terracotta	minecraft:blue_terracotta	minecraft:stained_hardened_clay	159:11
+brown terracotta	minecraft:brown_terracotta	minecraft:stained_hardened_clay	159:12
+green terracotta	minecraft:green_terracotta	minecraft:stained_hardened_clay	159:13
+red terracotta	minecraft:red_terracotta	minecraft:stained_hardened_clay	159:14
+black terracotta	minecraft:black_terracotta	minecraft:stained_hardened_clay	159:15
+barrier	minecraft:barrier		166
+iron trapdoor	minecraft:iron_trapdoor		167
+hay bale	minecraft:hay_block	minecraft:hay_bale	170
+white carpet	minecraft:white_carpet	minecraft:carpet	171
+orange carpet	minecraft:orange_carpet	minecraft:carpet	171:1
+magenta carpet	minecraft:magenta_carpet	minecraft:carpet	171:2
+light blue carpet	minecraft:light_blue_carpet	minecraft:carpet	171:3
+yellow carpet	minecraft:yellow_carpet	minecraft:carpet	171:4
+lime carpet	minecraft:lime_carpet	minecraft:carpet	171:5
+pink carpet	minecraft:pink_carpet	minecraft:carpet	171:6
+gray carpet	minecraft:gray_carpet	minecraft:carpet	171:7
+light gray carpet	minecraft:light_gray_carpet	minecraft:carpet	171:8
+cyan carpet	minecraft:cyan_carpet	minecraft:carpet	171:9
+purple carpet	minecraft:purple_carpet	minecraft:carpet	171:10
+blue carpet	minecraft:blue_carpet	minecraft:carpet	171:11
+brown carpet	minecraft:brown_carpet	minecraft:carpet	171:12
+green carpet	minecraft:green_carpet	minecraft:carpet	171:13
+red carpet	minecraft:red_carpet	minecraft:carpet	171:14
+black carpet	minecraft:black_carpet	minecraft:carpet	171:15
+terracotta	minecraft:terracotta	minecraft:hardened_clay	172
+block of coal	minecraft:coal_block		173
+packed ice	minecraft:packed_ice		174
+acacia stairs	minecraft:acacia_stairs		163
+dark oak stairs	minecraft:dark_oak_stairs		164
+slime block	minecraft:slime_block	minecraft:slime	165
+grass path	minecraft:grass_path		208
+sunflower	minecraft:sunflower	minecraft:double_plant	175
+lilac	minecraft:lilac	minecraft:double_plant	175:1
+rose bush	minecraft:rose_bush	minecraft:double_plant	175:4
+peony	minecraft:peony	minecraft:double_plant	175:5
+tall grass	minecraft:tall_grass	minecraft:double_plant	175:2
+large fern	minecraft:large_fern	minecraft:double_plant	175:3
+white stained glass	minecraft:white_stained_glass	minecraft:stained_glass	95
+orange stained glass	minecraft:orange_stained_glass	minecraft:stained_glass	95:1
+magenta stained glass	minecraft:magenta_stained_glass	minecraft:stained_glass	95:2
+light blue stained glass	minecraft:light_blue_stained_glass	minecraft:stained_glass	95:3
+yellow stained glass	minecraft:yellow_stained_glass	minecraft:stained_glass	95:4
+lime stained glass	minecraft:lime_stained_glass	minecraft:stained_glass	95:5
+pink stained glass	minecraft:pink_stained_glass	minecraft:stained_glass	95:6
+gray stained glass	minecraft:gray_stained_glass	minecraft:stained_glass	95:7
+light gray stained glass	minecraft:light_gray_stained_glass	minecraft:stained_glass	95:8
+cyan stained glass	minecraft:cyan_stained_glass	minecraft:stained_glass	95:9
+purple stained glass	minecraft:purple_stained_glass	minecraft:stained_glass	95:10
+blue stained glass	minecraft:blue_stained_glass	minecraft:stained_glass	95:11
+brown stained glass	minecraft:brown_stained_glass	minecraft:stained_glass	95:12
+green stained glass	minecraft:green_stained_glass	minecraft:stained_glass	95:13
+red stained glass	minecraft:red_stained_glass	minecraft:stained_glass	95:14
+black stained glass	minecraft:black_stained_glass	minecraft:stained_glass	95:15
+white stained glass pane	minecraft:white_stained_glass_pane	minecraft:stained_glass_pane	160
+orange stained glass pane	minecraft:orange_stained_glass_pane	minecraft:stained_glass_pane	160:1
+magenta stained glass pane	minecraft:magenta_stained_glass_pane	minecraft:stained_glass_pane	160:2
+light blue stained glass pane	minecraft:light_blue_stained_glass_pane	minecraft:stained_glass_pane	160:3
+yellow stained glass pane	minecraft:yellow_stained_glass_pane	minecraft:stained_glass_pane	160:4
+lime stained glass pane	minecraft:lime_stained_glass_pane	minecraft:stained_glass_pane	160:5
+pink stained glass pane	minecraft:pink_stained_glass_pane	minecraft:stained_glass_pane	160:6
+gray stained glass pane	minecraft:gray_stained_glass_pane	minecraft:stained_glass_pane	160:7
+light gray stained glass pane	minecraft:light_gray_stained_glass_pane	minecraft:stained_glass_pane	160:8
+cyan stained glass pane	minecraft:cyan_stained_glass_pane	minecraft:stained_glass_pane	160:9
+purple stained glass pane	minecraft:purple_stained_glass_pane	minecraft:stained_glass_pane	160:10
+blue stained glass pane	minecraft:blue_stained_glass_pane	minecraft:stained_glass_pane	160:11
+brown stained glass pane	minecraft:brown_stained_glass_pane	minecraft:stained_glass_pane	160:12
+green stained glass pane	minecraft:green_stained_glass_pane	minecraft:stained_glass_pane	160:13
+red stained glass pane	minecraft:red_stained_glass_pane	minecraft:stained_glass_pane	160:14
+black stained glass pane	minecraft:black_stained_glass_pane	minecraft:stained_glass_pane	160:15
+prismarine	minecraft:prismarine		168
+prismarine bricks	minecraft:prismarine_bricks	minecraft:prismarine	168:1
+dark prismarine	minecraft:dark_prismarine	minecraft:prismarine	168:2
+prismarine stairs	minecraft:prismarine_stairs		
+prismarine brick stairs	minecraft:prismarine_brick_stairs		
+dark prismarine stairs	minecraft:dark_prismarine_stairs		
+sea lantern	minecraft:sea_lantern		169
+red sandstone	minecraft:red_sandstone		179
+chiseled red sandstone	minecraft:chiseled_red_sandstone	minecraft:red_sandstone	179:1
+cut red sandstone	minecraft:cut_red_sandstone	minecraft:red_sandstone	179:2
+red sandstone stairs	minecraft:red_sandstone_stairs		180
+repeating command block	minecraft:repeating_command_block		210
+chain command block	minecraft:chain_command_block		211
+magma block	minecraft:magma_block	minecraft:magma	213
+nether wart block	minecraft:nether_wart_block		214
+red nether bricks	minecraft:red_nether_bricks	minecraft:red_nether_brick	215
+bone block	minecraft:bone_block		216
+structure void	minecraft:structure_void		217
+observer	minecraft:observer		218
+shulker box	minecraft:shulker_box		
+white shulker box	minecraft:white_shulker_box		219
+orange shulker box	minecraft:orange_shulker_box		220
+magenta shulker box	minecraft:magenta_shulker_box		221
+light blue shulker box	minecraft:light_blue_shulker_box		222
+yellow shulker box	minecraft:yellow_shulker_box		223
+lime shulker box	minecraft:lime_shulker_box		224
+pink shulker box	minecraft:pink_shulker_box		225
+gray shulker box	minecraft:gray_shulker_box		226
+light gray shulker box	minecraft:light_gray_shulker_box		227
+cyan shulker box	minecraft:cyan_shulker_box		228
+purple shulker box	minecraft:purple_shulker_box		229
+blue shulker box	minecraft:blue_shulker_box		230
+brown shulker box	minecraft:brown_shulker_box		231
+green shulker box	minecraft:green_shulker_box		232
+red shulker box	minecraft:red_shulker_box		233
+black shulker box	minecraft:black_shulker_box		234
+white glazed terracotta	minecraft:white_glazed_terracotta		235
+orange glazed terracotta	minecraft:orange_glazed_terracotta		236
+magenta glazed terracotta	minecraft:magenta_glazed_terracotta		237
+light blue glazed terracotta	minecraft:light_blue_glazed_terracotta		238
+yellow glazed terracotta	minecraft:yellow_glazed_terracotta		239
+lime glazed terracotta	minecraft:lime_glazed_terracotta		240
+pink glazed terracotta	minecraft:pink_glazed_terracotta		241
+gray glazed terracotta	minecraft:gray_glazed_terracotta		242
+light gray glazed terracotta	minecraft:light_gray_glazed_terracotta		243
+cyan glazed terracotta	minecraft:cyan_glazed_terracotta		244
+purple glazed terracotta	minecraft:purple_glazed_terracotta		245
+blue glazed terracotta	minecraft:blue_glazed_terracotta		246
+brown glazed terracotta	minecraft:brown_glazed_terracotta		247
+green glazed terracotta	minecraft:green_glazed_terracotta		248
+red glazed terracotta	minecraft:red_glazed_terracotta		249
+black glazed terracotta	minecraft:black_glazed_terracotta		250
+white concrete	minecraft:white_concrete	minecraft:concrete	251
+orange concrete	minecraft:orange_concrete	minecraft:concrete	251:1
+magenta concrete	minecraft:magenta_concrete	minecraft:concrete	251:2
+light blue concrete	minecraft:light_blue_concrete	minecraft:concrete	251:3
+yellow concrete	minecraft:yellow_concrete	minecraft:concrete	251:4
+lime concrete	minecraft:lime_concrete	minecraft:concrete	251:5
+pink concrete	minecraft:pink_concrete	minecraft:concrete	251:6
+gray concrete	minecraft:gray_concrete	minecraft:concrete	251:7
+light gray concrete	minecraft:light_gray_concrete	minecraft:concrete	251:8
+cyan concrete	minecraft:cyan_concrete	minecraft:concrete	251:9
+purple concrete	minecraft:purple_concrete	minecraft:concrete	251:10
+blue concrete	minecraft:blue_concrete	minecraft:concrete	251:11
+brown concrete	minecraft:brown_concrete	minecraft:concrete	251:12
+green concrete	minecraft:green_concrete	minecraft:concrete	251:13
+red concrete	minecraft:red_concrete	minecraft:concrete	251:14
+black concrete	minecraft:black_concrete	minecraft:concrete	251:15
+white concrete powder	minecraft:white_concrete_powder	minecraft:concrete_powder	252
+orange concrete powder	minecraft:orange_concrete_powder	minecraft:concrete_powder	252:1
+magenta concrete powder	minecraft:magenta_concrete_powder	minecraft:concrete_powder	252:2
+light blue concrete powder	minecraft:light_blue_concrete_powder	minecraft:concrete_powder	252:3
+yellow concrete powder	minecraft:yellow_concrete_powder	minecraft:concrete_powder	252:4
+lime concrete powder	minecraft:lime_concrete_powder	minecraft:concrete_powder	252:5
+pink concrete powder	minecraft:pink_concrete_powder	minecraft:concrete_powder	252:6
+gray concrete powder	minecraft:gray_concrete_powder	minecraft:concrete_powder	252:7
+light gray concrete powder	minecraft:light_gray_concrete_powder	minecraft:concrete_powder	252:8
+cyan concrete powder	minecraft:cyan_concrete_powder	minecraft:concrete_powder	252:9
+purple concrete powder	minecraft:purple_concrete_powder	minecraft:concrete_powder	252:10
+blue concrete powder	minecraft:blue_concrete_powder	minecraft:concrete_powder	252:11
+brown concrete powder	minecraft:brown_concrete_powder	minecraft:concrete_powder	252:12
+green concrete powder	minecraft:green_concrete_powder	minecraft:concrete_powder	252:13
+red concrete powder	minecraft:red_concrete_powder	minecraft:concrete_powder	252:14
+black concrete powder	minecraft:black_concrete_powder	minecraft:concrete_powder	252:15
+turtle egg	minecraft:turtle_egg		
+dead tube coral block	minecraft:dead_tube_coral_block		
+dead brain coral block	minecraft:dead_brain_coral_block		
+dead bubble coral block	minecraft:dead_bubble_coral_block		
+dead fire coral block	minecraft:dead_fire_coral_block		
+dead horn coral block	minecraft:dead_horn_coral_block		
+tube coral block	minecraft:tube_coral_block		
+brain coral block	minecraft:brain_coral_block		
+bubble coral block	minecraft:bubble_coral_block		
+fire coral block	minecraft:fire_coral_block		
+horn coral block	minecraft:horn_coral_block		
+tube coral	minecraft:tube_coral		
+brain coral	minecraft:brain_coral		
+bubble coral	minecraft:bubble_coral		
+fire coral	minecraft:fire_coral		
+horn coral	minecraft:horn_coral		
+dead brain coral	minecraft:dead_brain_coral		
+dead bubble coral	minecraft:dead_bubble_coral		
+dead fire coral	minecraft:dead_fire_coral		
+dead horn coral	minecraft:dead_horn_coral		
+dead tube coral	minecraft:dead_tube_coral		
+tube coral fan	minecraft:tube_coral_fan		
+brain coral fan	minecraft:brain_coral_fan		
+bubble coral fan	minecraft:bubble_coral_fan		
+fire coral fan	minecraft:fire_coral_fan		
+horn coral fan	minecraft:horn_coral_fan		
+dead tube coral fan	minecraft:dead_tube_coral_fan		
+dead brain coral fan	minecraft:dead_brain_coral_fan		
+dead bubble coral fan	minecraft:dead_bubble_coral_fan		
+dead fire coral fan	minecraft:dead_fire_coral_fan		
+dead horn coral fan	minecraft:dead_horn_coral_fan		
+blue ice	minecraft:blue_ice		
+conduit	minecraft:conduit		
+iron door	minecraft:iron_door		330
+oak door	minecraft:oak_door	minecraft:wooden_door	324
+spruce door	minecraft:spruce_door		427
+birch door	minecraft:birch_door		428
+jungle door	minecraft:jungle_door		429
+acacia door	minecraft:acacia_door		430
+dark oak door	minecraft:dark_oak_door		431
+redstone repeater	minecraft:repeater		356
+redstone comparator	minecraft:comparator		404
+structure block	minecraft:structure_block		255
+turtle shell	minecraft:turtle_helmet		
+scute	minecraft:scute		
+iron shovel	minecraft:iron_shovel		256
+iron pickaxe	minecraft:iron_pickaxe		257
+iron axe	minecraft:iron_axe		258
+flint and steel	minecraft:flint_and_steel		259
+apple	minecraft:apple		260
+bow	minecraft:bow		261
+arrow	minecraft:arrow		262
+coal	minecraft:coal		263
+charcoal	minecraft:charcoal		263:1
+diamond	minecraft:diamond		264
+iron ingot	minecraft:iron_ingot		265
+gold ingot	minecraft:gold_ingot		266
+iron sword	minecraft:iron_sword		267
+wooden sword	minecraft:wooden_sword		268
+wooden shovel	minecraft:wooden_shovel		269
+wooden pickaxe	minecraft:wooden_pickaxe		270
+wooden axe	minecraft:wooden_axe		271
+stone sword	minecraft:stone_sword		272
+stone shovel	minecraft:stone_shovel		273
+stone pickaxe	minecraft:stone_pickaxe		274
+stone axe	minecraft:stone_axe		275
+diamond sword	minecraft:diamond_sword		276
+diamond shovel	minecraft:diamond_shovel		277
+diamond pickaxe	minecraft:diamond_pickaxe		278
+diamond axe	minecraft:diamond_axe		279
+stick	minecraft:stick		280
+bowl	minecraft:bowl		281
+mushroom stew	minecraft:mushroom_stew		282
+golden sword	minecraft:golden_sword		283
+golden shovel	minecraft:golden_shovel		284
+golden pickaxe	minecraft:golden_pickaxe		285
+golden axe	minecraft:golden_axe		286
+string	minecraft:string		287
+feather	minecraft:feather		288
+gunpowder	minecraft:gunpowder		289
+wooden hoe	minecraft:wooden_hoe		290
+stone hoe	minecraft:stone_hoe		291
+iron hoe	minecraft:iron_hoe		292
+diamond hoe	minecraft:diamond_hoe		293
+golden hoe	minecraft:golden_hoe		294
+wheat seeds	minecraft:wheat_seeds		295
+wheat	minecraft:wheat		296
+bread	minecraft:bread		297
+leather cap	minecraft:leather_helmet		298
+leather tunic	minecraft:leather_chestplate		299
+leather pants	minecraft:leather_leggings		300
+leather boots	minecraft:leather_boots		301
+chainmail helmet	minecraft:chainmail_helmet		302
+chainmail chestplate	minecraft:chainmail_chestplate		303
+chainmail leggings	minecraft:chainmail_leggings		304
+chainmail boots	minecraft:chainmail_boots		305
+iron helmet	minecraft:iron_helmet		306
+iron chestplate	minecraft:iron_chestplate		307
+iron leggings	minecraft:iron_leggings		308
+iron boots	minecraft:iron_boots		309
+diamond helmet	minecraft:diamond_helmet		310
+diamond chestplate	minecraft:diamond_chestplate		311
+diamond leggings	minecraft:diamond_leggings		312
+diamond boots	minecraft:diamond_boots		313
+golden helmet	minecraft:golden_helmet		314
+golden chestplate	minecraft:golden_chestplate		315
+golden leggings	minecraft:golden_leggings		316
+golden boots	minecraft:golden_boots		317
+flint	minecraft:flint		318
+raw porkchop	minecraft:porkchop		319
+cooked porkchop	minecraft:cooked_porkchop		320
+painting	minecraft:painting		321
+golden apple	minecraft:golden_apple		322
+enchanted golden apple	minecraft:enchanted_golden_apple	minecraft:golden_apple	322:1
+sign	minecraft:sign		323
+bucket	minecraft:bucket		325
+water bucket	minecraft:water_bucket		326
+lava bucket	minecraft:lava_bucket		327
+minecart	minecraft:minecart		328
+saddle	minecraft:saddle		329
+redstone	minecraft:redstone		331
+snowball	minecraft:snowball		332
+oak boat	minecraft:oak_boat	minecraft:boat	333
+leather	minecraft:leather		334
+milk bucket	minecraft:milk_bucket		335
+bucket of pufferfish	minecraft:pufferfish_bucket		
+bucket of salmon	minecraft:salmon_bucket		
+bucket of cod	minecraft:cod_bucket		
+bucket of tropical fish	minecraft:tropical_fish_bucket	minecraft:clownfish_bucket	
+brick	minecraft:brick		336
+clay	minecraft:clay_ball		337
+sugar cane	minecraft:sugar_cane	minecraft:reeds	338
+kelp	minecraft:kelp		
+dried kelp block	minecraft:dried_kelp_block		
+paper	minecraft:paper		339
+book	minecraft:book		340
+slimeball	minecraft:slime_ball		341
+minecart with chest	minecraft:chest_minecart		342
+minecart with furnace	minecraft:furnace_minecart		343
+egg	minecraft:egg		344
+compass	minecraft:compass		345
+fishing rod	minecraft:fishing_rod		346
+clock	minecraft:clock		347
+glowstone dust	minecraft:glowstone_dust		348
+raw cod	minecraft:cod	minecraft:fish	349
+raw salmon	minecraft:salmon	minecraft:fish	349:1
+tropical fish	minecraft:tropical_fish	minecraft:fish	349:2
+pufferfish	minecraft:pufferfish	minecraft:fish	349:3
+cooked cod	minecraft:cooked_cod	minecraft:cooked_fish	350
+cooked salmon	minecraft:cooked_salmon	minecraft:cooked_fish	350:1
+ink sac	minecraft:ink_sac	minecraft:dye	351
+rose red	minecraft:rose_red	minecraft:dye	351:1
+cactus green	minecraft:cactus_green	minecraft:dye	351:2
+cocoa beans	minecraft:cocoa_beans	minecraft:dye	351:3
+lapis lazuli	minecraft:lapis_lazuli	minecraft:dye	351:4
+purple dye	minecraft:purple_dye	minecraft:dye	351:5
+cyan dye	minecraft:cyan_dye	minecraft:dye	351:6
+light gray dye	minecraft:light_gray_dye	minecraft:dye	351:7
+gray dye	minecraft:gray_dye	minecraft:dye	351:8
+pink dye	minecraft:pink_dye	minecraft:dye	351:9
+lime dye	minecraft:lime_dye	minecraft:dye	351:10
+dandelion yellow	minecraft:dandelion_yellow	minecraft:dye	351:11
+light blue dye	minecraft:light_blue_dye	minecraft:dye	351:12
+magenta dye	minecraft:magenta_dye	minecraft:dye	351:13
+orange dye	minecraft:orange_dye	minecraft:dye	351:14
+bone meal	minecraft:bone_meal	minecraft:dye	351:15
+bone	minecraft:bone		352
+sugar	minecraft:sugar		353
+cake	minecraft:cake		354
+white bed	minecraft:white_bed	minecraft:bed	355
+orange bed	minecraft:orange_bed	minecraft:bed	355:1
+magenta bed	minecraft:magenta_bed	minecraft:bed	355:2
+light blue bed	minecraft:light_blue_bed	minecraft:bed	355:3
+yellow bed	minecraft:yellow_bed	minecraft:bed	355:4
+lime bed	minecraft:lime_bed	minecraft:bed	355:5
+pink bed	minecraft:pink_bed	minecraft:bed	355:6
+gray bed	minecraft:gray_bed	minecraft:bed	355:7
+light gray bed	minecraft:light_gray_bed	minecraft:bed	355:8
+cyan bed	minecraft:cyan_bed	minecraft:bed	355:9
+purple bed	minecraft:purple_bed	minecraft:bed	355:10
+blue bed	minecraft:blue_bed	minecraft:bed	355:11
+brown bed	minecraft:brown_bed	minecraft:bed	355:12
+green bed	minecraft:green_bed	minecraft:bed	355:13
+red bed	minecraft:red_bed	minecraft:bed	355:14
+black bed	minecraft:black_bed	minecraft:bed	355:15
+cookie	minecraft:cookie		357
+map	minecraft:filled_map		358
+shears	minecraft:shears		359
+melon slice	minecraft:melon_slice	minecraft:melon	360
+dried kelp	minecraft:dried_kelp		
+pumpkin seeds	minecraft:pumpkin_seeds		361
+melon seeds	minecraft:melon_seeds		362
+raw beef	minecraft:beef		363
+steak	minecraft:cooked_beef		364
+raw chicken	minecraft:chicken		365
+cooked chicken	minecraft:cooked_chicken		366
+rotten flesh	minecraft:rotten_flesh		367
+ender pearl	minecraft:ender_pearl		368
+blaze rod	minecraft:blaze_rod		369
+ghast tear	minecraft:ghast_tear		370
+gold nugget	minecraft:gold_nugget		371
+nether wart	minecraft:nether_wart		372
+potion	minecraft:potion	minecraft:potion	373
+splash potion	minecraft:splash_potion		438
+lingering potion	minecraft:lingering_potion		441
+water bottle	minecraft:potion{potion:water}		
+uncraftable potion	minecraft:potion{potion:empty}		
+awkward potion	minecraft:potion{potion:awkward}	minecraft:potion	373:16
+thick potion	minecraft:potion{potion:thick}	minecraft:potion	373:32
+mundane potion	minecraft:potion{potion:mundane}	minecraft:potion	373:64
+regeneration potion (0:45)	minecraft:potion{potion:regeneration}	minecraft:potion	373:8193
+swiftness potion (3:00)	minecraft:potion{potion:swiftness}	minecraft:potion	373:8194
+fire resistance potion (3:00)	minecraft:potion{potion:fire_resistance}	minecraft:potion	373:8195
+poison potion (0:45)	minecraft:potion{potion:poison}	minecraft:potion	373:8196
+healing potion	minecraft:potion{potion:healing}	minecraft:potion	373:8197
+night vision potion (3:00)	minecraft:potion{potion:night_vision}	minecraft:potion	373:8198
+weakness potion (1:30)	minecraft:potion{potion:weakness}	minecraft:potion	373:8200
+strength potion (3:00)	minecraft:potion{potion:strength}	minecraft:potion	373:8201
+slowness potion (1:30)	minecraft:potion{potion:slowness}	minecraft:potion	373:8202
+harming potion	minecraft:potion{potion:harming}	minecraft:potion	373:8204
+water breathing potion (3:00)	minecraft:potion{potion:water_breathing}	minecraft:potion	373:8205
+invisibility potion (3:00)	minecraft:potion{potion:invisibility}	minecraft:potion	373:8206
+regeneration potion ii (0:22)	minecraft:potion{potion:strong_regeneration}	minecraft:potion	373:8225
+swiftness potion ii (1:30)	minecraft:potion{potion:strong_swiftness}	minecraft:potion	373:8226
+poison potion ii (0:22)	minecraft:potion{potion:strong_poison}	minecraft:potion	373:8228
+healing potion ii	minecraft:potion{potion:strong_healing}	minecraft:potion	373:8229
+strength potion ii (1:30)	minecraft:potion{potion:strong_strength}	minecraft:potion	373:8233
+leaping potion ii (1:30)	minecraft:potion{potion:strong_leaping}	minecraft:potion	373:8235
+harming potion ii	minecraft:potion{potion:strong_harming}	minecraft:potion	373:8236
+regeneration potion (2:00)	minecraft:potion{potion:long_regeneration}	minecraft:potion	373:8257
+swiftness potion (8:00)	minecraft:potion{potion:long_swiftness}	minecraft:potion	373:8258
+fire resistance potion (8:00)	minecraft:potion{potion:long_fire_resistance}	minecraft:potion	373:8259
+poison potion (2:00)	minecraft:potion{potion:long_poison}	minecraft:potion	373:8260
+night vision potion (8:00)	minecraft:potion{potion:long_night_vision}	minecraft:potion	373:8262
+weakness potion (4:00)	minecraft:potion{potion:long_weakness}	minecraft:potion	373:8264
+strength potion (8:00)	minecraft:potion{potion:long_strength}	minecraft:potion	373:8265
+slowness potion (4:00)	minecraft:potion{potion:long_slowness}	minecraft:potion	373:8266
+leaping potion (3:00)	minecraft:potion{potion:leaping}	minecraft:potion	373:8267
+water breathing potion (8:00)	minecraft:potion{potion:long_water_breathing}	minecraft:potion	373:8269
+invisibility potion (8:00)	minecraft:potion{potion:long_invisibility}	minecraft:potion	373:8270
+regeneration potion ii (1:00)	minecraft:potion{potion:strong_regeneration}	minecraft:potion	373:8289
+swiftness potion ii (4:00)	minecraft:potion{potion:strong_swiftness}	minecraft:potion	373:8290
+poison potion ii (1:00)	minecraft:potion{potion:strong_poison}	minecraft:potion	373:8292
+strength potion ii (4:00)	minecraft:potion{potion:strong_strength}	minecraft:potion	373:8297
+potion of the turtle master (0:20)	minecraft:potion{potion:turtle_master}		
+potion of the turtle master (0:40)	minecraft:potion{potion:long_turtle_master}		
+potion of the turtle master ii (0:20)	minecraft:potion{potion:strong_turtle_master}		
+potion of slow falling (1:30)	minecraft:potion{potion:slow_falling}		
+potion of slow falling (4:00)	minecraft:potion{potion:long_slow_falling}		
+regeneration splash (0:33) potion	minecraft:splash_potion{potion:regeneration}	minecraft:potion	373:16385
+swiftness splash (2:15) potion	minecraft:splash_potion{potion:swiftness}	minecraft:potion	373:16386
+fire resistance splash (2:15) potion	minecraft:splash_potion{potion:fire_resistance}	minecraft:potion	373:16387
+poison splash (0:33) potion	minecraft:splash_potion{potion:poison}	minecraft:potion	373:16388
+healing splash potion	minecraft:splash_potion{potion:healing}	minecraft:potion	373:16389
+night vision splash (2:15) potion	minecraft:splash_potion{potion:night_vision}	minecraft:potion	373:16390
+weakness splash (1:07) potion	minecraft:splash_potion{potion:weakness}	minecraft:potion	373:16392
+strength splash (2:15) potion	minecraft:splash_potion{potion:strength}	minecraft:potion	373:16393
+slowness splash (1:07) potion	minecraft:splash_potion{potion:slowness}	minecraft:potion	373:16394
+harming splash potion	minecraft:splash_potion{potion:harming}	minecraft:potion	373:16396
+water breathing splash (2:15) potion	minecraft:splash_potion{potion:water_breathing}	minecraft:potion	373:16397
+invisibility splash (2:15) potion	minecraft:splash_potion{potion:invisibility}	minecraft:potion	373:16398
+regeneration ii splash (0:16) potion	minecraft:splash_potion{potion:strong_regeneration}	minecraft:potion	373:16417
+swiftness ii splash (1:07) potion	minecraft:splash_potion{potion:strong_swiftness}	minecraft:potion	373:16418
+poison ii splash (0:16) potion	minecraft:splash_potion{potion:strong_poison}	minecraft:potion	373:16420
+healing ii splash potion	minecraft:splash_potion{potion:strong_healing}	minecraft:potion	373:16421
+strength ii splash (1:07) potion	minecraft:splash_potion{potion:strong_poison}	minecraft:potion	373:16425
+leaping ii splash (1:07) potion	minecraft:splash_potion{potion:strong_leaping}	minecraft:potion	373:16427
+harming ii splash potion	minecraft:splash_potion{potion:strong_harming}	minecraft:potion	373:16428
+regeneration splash (1:30) potion	minecraft:splash_potion{potion:long_regeneration}	minecraft:potion	373:16449
+swiftness splash (6:00) potion	minecraft:splash_potion{potion:long_swiftness}	minecraft:potion	373:16450
+fire resistance splash (6:00) potion	minecraft:splash_potion{potion:long_fire_resistance}	minecraft:potion	373:16451
+poison splash (1:30) potion	minecraft:splash_potion{potion:long_poison}	minecraft:potion	373:16452
+night vision splash (6:00) potion	minecraft:splash_potion{potion:long_night_vision}	minecraft:potion	373:16454
+weakness splash (3:00) potion	minecraft:splash_potion{potion:long_weakness}	minecraft:potion	373:16456
+strength splash (6:00) potion	minecraft:splash_potion{potion:long_strength}	minecraft:potion	373:16457
+slowness splash (3:00) potion	minecraft:splash_potion{potion:long_slowness}	minecraft:potion	373:16458
+leaping splash (2:15) potion	minecraft:splash_potion{potion:leaping}	minecraft:potion	373:16459
+water breathing splash (6:00) potion	minecraft:splash_potion{potion:long_water_breathing}	minecraft:potion	373:16461
+invisibility splash (6:00) potion	minecraft:splash_potion{potion:long_invisibility}	minecraft:potion	373:16462
+regeneration ii splash (0:45) potion	minecraft:splash_potion{potion:strong_regeneration}	minecraft:potion	373:16481
+swiftness ii splash (3:00) potion	minecraft:splash_potion{potion:strong_swiftness}	minecraft:potion	373:16482
+poison ii splash (0:45) potion	minecraft:splash_potion{potion:strong_poison}	minecraft:potion	373:16484
+strength ii splash (3:00) potion	minecraft:splash_potion{potion:strong_strength}	minecraft:potion	373:16489
+splash turtle master potion (0:20)	minecraft:splash_potion{potion:turtle_master}		
+splash turtle master potion (0:40)	minecraft:splash_potion{potion:long_turtle_master}		
+splash turtle master potion ii (0:20)	minecraft:splash_potion{potion:strong_turtle_master}		
+splash slow falling potion (1:30)	minecraft:splash_potion{potion:slow_falling}		
+splash slow falling potion (4:00)	minecraft:splash_potion{potion:long_slow_falling}		
+glass bottle	minecraft:glass_bottle		374
+spider eye	minecraft:spider_eye		375
+fermented spider eye	minecraft:fermented_spider_eye		376
+blaze powder	minecraft:blaze_powder		377
+magma cream	minecraft:magma_cream		378
+brewing stand	minecraft:brewing_stand		379
+cauldron	minecraft:cauldron		380
+eye of ender	minecraft:ender_eye		381
+glistering melon slice	minecraft:glistering_melon_slice	minecraft:speckled_melon	382
+bat spawn egg	minecraft:bat_spawn_egg	minecraft:spawn_egg	383:65
+blaze spawn egg	minecraft:blaze_spawn_egg	minecraft:spawn_egg	383:61
+cave spider spawn egg	minecraft:cave_spider_spawn_egg	minecraft:spawn_egg	383:59
+chicken spawn egg	minecraft:chicken_spawn_egg	minecraft:spawn_egg	383:93
+cod spawn egg	minecraft:cod_spawn_egg		
+cow spawn egg	minecraft:cow_spawn_egg	minecraft:spawn_egg	383:92
+creeper spawn egg	minecraft:creeper_spawn_egg	minecraft:spawn_egg	383:50
+dolphin spawn egg	minecraft:dolphin_spawn_egg		
+donkey spawn egg	minecraft:donkey_spawn_egg	minecraft:spawn_egg	383:31
+drowned spawn egg	minecraft:drowned_spawn_egg		
+elder guardian spawn egg	minecraft:elder_guardian_spawn_egg	minecraft:spawn_egg	383:4
+enderman spawn egg	minecraft:enderman_spawn_egg	minecraft:spawn_egg	383:58
+endermite spawn egg	minecraft:endermite_spawn_egg	minecraft:spawn_egg	383:67
+evoker spawn egg	minecraft:evoker_spawn_egg	minecraft:spawn_egg	383:34
+ghast spawn egg	minecraft:ghast_spawn_egg	minecraft:spawn_egg	383:56
+guardian spawn egg	minecraft:guardian_spawn_egg	minecraft:spawn_egg	383:68
+horse spawn egg	minecraft:horse_spawn_egg	minecraft:spawn_egg	383:100
+husk spawn egg	minecraft:husk_spawn_egg	minecraft:spawn_egg	383:23
+llama spawn egg	minecraft:llama_spawn_egg	minecraft:spawn_egg	383:103
+magma cube spawn egg	minecraft:magma_cube_spawn_egg	minecraft:spawn_egg	383:62
+mooshroom spawn egg	minecraft:mooshroom_spawn_egg	minecraft:spawn_egg	383:96
+mule spawn egg	minecraft:mule_spawn_egg	minecraft:spawn_egg	383:32
+ocelot spawn egg	minecraft:ocelot_spawn_egg	minecraft:spawn_egg	383:98
+parrot spawn egg	minecraft:parrot_spawn_egg	minecraft:spawn_egg	
+phantom spawn egg	minecraft:phantom_spawn_egg		
+pig spawn egg	minecraft:pig_spawn_egg	minecraft:spawn_egg	383:90
+polar bear spawn egg	minecraft:polar_bear_spawn_egg	minecraft:spawn_egg	383:102
+pufferfish spawn egg	minecraft:pufferfish_spawn_egg		
+rabbit spawn egg	minecraft:rabbit_spawn_egg	minecraft:spawn_egg	383:101
+salmon spawn egg	minecraft:salmon_spawn_egg		
+sheep spawn egg	minecraft:sheep_spawn_egg	minecraft:spawn_egg	383:91
+shulker spawn egg	minecraft:shulker_spawn_egg	minecraft:spawn_egg	383:69
+silverfish spawn egg	minecraft:silverfish_spawn_egg	minecraft:spawn_egg	
+skeleton spawn egg	minecraft:skeleton_spawn_egg	minecraft:spawn_egg	383:51
+skeleton horse spawn egg	minecraft:skeleton_horse_spawn_egg	minecraft:spawn_egg	383:28
+slime spawn egg	minecraft:slime_spawn_egg	minecraft:spawn_egg	383:55
+spider spawn egg	minecraft:spider_spawn_egg	minecraft:spawn_egg	383:52
+squid spawn egg	minecraft:squid_spawn_egg	minecraft:spawn_egg	383:94
+stray spawn egg	minecraft:stray_spawn_egg	minecraft:spawn_egg	383:6
+tropical fish spawn egg	minecraft:tropical_fish_spawn_egg		
+turtle spawn egg	minecraft:turtle_spawn_egg		
+vex spawn egg	minecraft:vex_spawn_egg	minecraft:spawn_egg	383:35
+villager spawn egg	minecraft:villager_spawn_egg	minecraft:spawn_egg	383:120
+vindicator spawn egg	minecraft:vindicator_spawn_egg	minecraft:spawn_egg	383:36
+witch spawn egg	minecraft:witch_spawn_egg	minecraft:spawn_egg	383:66
+wither skeleton spawn egg	minecraft:wither_skeleton_spawn_egg	minecraft:spawn_egg	383:5
+wolf spawn egg	minecraft:wolf_spawn_egg	minecraft:spawn_egg	383:95
+zombie spawn egg	minecraft:zombie_spawn_egg	minecraft:spawn_egg	383:54
+zombie horse spawn egg	minecraft:zombie_horse_spawn_egg	minecraft:spawn_egg	383:29
+zombie pigman spawn egg	minecraft:zombie_pigman_spawn_egg	minecraft:spawn_egg	383:57
+zombie villager spawn egg	minecraft:zombie_villager_spawn_egg	minecraft:spawn_egg	383:27
+bottle o' enchanting	minecraft:experience_bottle		384
+fire charge	minecraft:fire_charge		385
+book and quill	minecraft:writable_book		386
+written book	minecraft:written_book		387
+emerald	minecraft:emerald		388
+item frame	minecraft:item_frame		389
+flower pot	minecraft:flower_pot		390
+carrot	minecraft:carrot		391
+potato	minecraft:potato		392
+baked potato	minecraft:baked_potato		393
+poisonous potato	minecraft:poisonous_potato		394
+empty map	minecraft:map		395
+golden carrot	minecraft:golden_carrot		396
+skeleton skull	minecraft:skeleton_skull	minecraft:skull	397
+wither skeleton skull	minecraft:wither_skeleton_skull	minecraft:skull	397:1
+player head	minecraft:player_head	minecraft:skull	397:3
+zombie head	minecraft:zombie_head	minecraft:skull	397:2
+creeper head	minecraft:creeper_head	minecraft:skull	397:4
+dragon head	minecraft:dragon_head	minecraft:skull	397:5
+carrot on a stick	minecraft:carrot_on_a_stick		398
+nether star	minecraft:nether_star		399
+pumpkin pie	minecraft:pumpkin_pie		400
+firework rocket	minecraft:firework_rocket	minecraft:fireworks	401
+firework star	minecraft:firework_star	minecraft:firework_charge	402
+enchanted book	minecraft:enchanted_book		403
+nether brick	minecraft:nether_brick	minecraft:netherbrick	405
+nether quartz	minecraft:quartz		406
+minecart with tnt	minecraft:tnt_minecart		407
+minecart with hopper	minecraft:hopper_minecart		408
+prismarine shard	minecraft:prismarine_shard		409
+prismarine crystals	minecraft:prismarine_crystals		410
+raw rabbit	minecraft:rabbit		411
+cooked rabbit	minecraft:cooked_rabbit		412
+rabbit stew	minecraft:rabbit_stew		413
+rabbit's foot	minecraft:rabbit_foot		414
+rabbit hide	minecraft:rabbit_hide		415
+armor stand	minecraft:armor_stand		416
+iron horse armor	minecraft:iron_horse_armor		417
+golden horse armor	minecraft:golden_horse_armor		418
+diamond horse armor	minecraft:diamond_horse_armor		419
+lead	minecraft:lead		420
+name tag	minecraft:name_tag		421
+minecart with command block	minecraft:command_block_minecart		422
+raw mutton	minecraft:mutton		423
+cooked mutton	minecraft:cooked_mutton		424
+white banner	minecraft:white_banner	minecraft:banner	425:15
+orange banner	minecraft:orange_banner	minecraft:banner	425:14
+magenta banner	minecraft:magenta_banner	minecraft:banner	425:13
+light blue banner	minecraft:light_blue_banner	minecraft:banner	425:12
+yellow banner	minecraft:yellow_banner	minecraft:banner	425:11
+lime banner	minecraft:lime_banner	minecraft:banner	425:10
+pink banner	minecraft:pink_banner	minecraft:banner	425:9
+gray banner	minecraft:gray_banner	minecraft:banner	425:8
+light gray banner	minecraft:light_gray_banner	minecraft:banner	425:7
+cyan banner	minecraft:cyan_banner	minecraft:banner	425:6
+purple banner	minecraft:purple_banner	minecraft:banner	425:5
+blue banner	minecraft:blue_banner	minecraft:banner	425:4
+brown banner	minecraft:brown_banner	minecraft:banner	425:3
+green banner	minecraft:green_banner	minecraft:banner	425:2
+red banner	minecraft:red_banner	minecraft:banner	425:1
+black banner	minecraft:black_banner	minecraft:banner	425
+end crystal	minecraft:end_crystal		426
+chorus fruit	minecraft:chorus_fruit		432
+popped chorus fruit	minecraft:popped_chorus_fruit	minecraft:chorus_fruit_popped	433
+beetroot	minecraft:beetroot		434
+beetroot seeds	minecraft:beetroot_seeds		435
+beetroot soup	minecraft:beetroot_soup		436
+dragon's breath	minecraft:dragon_breath		437
+spectral arrow	minecraft:spectral_arrow		439
+tipped arrow	minecraft:tipped_arrow		440
+shield	minecraft:shield		442
+elytra	minecraft:elytra		443
+spruce boat	minecraft:spruce_boat		444
+birch boat	minecraft:birch_boat		445
+jungle boat	minecraft:jungle_boat		446
+acacia boat	minecraft:acacia_boat		447
+dark oak boat	minecraft:dark_oak_boat		448
+totem of undying	minecraft:totem_of_undying		449
+shulker shell	minecraft:shulker_shell		450
+iron nugget	minecraft:iron_nugget		452
+knowledge book	minecraft:knowledge_book		
+debug stick	minecraft:debug_stick		
+13 disc	minecraft:music_disc_13	minecraft:record_13	2256
+cat disc	minecraft:music_disc_cat	minecraft:record_cat	2257
+blocks disc	minecraft:music_disc_blocks	minecraft:record_blocks	2258
+chirp disc	minecraft:music_disc_chirp	minecraft:record_chirp	2259
+far disc	minecraft:music_disc_far	minecraft:record_far	2260
+mall disc	minecraft:music_disc_mall	minecraft:record_mall	2261
+mellohi disc	minecraft:music_disc_mellohi	minecraft:record_mellohi	2262
+stal disc	minecraft:music_disc_stal	minecraft:record_stal	2263
+strad disc	minecraft:music_disc_strad	minecraft:record_strad	2264
+ward disc	minecraft:music_disc_ward	minecraft:record_ward	2265
+11 disc	minecraft:music_disc_11	minecraft:record_11	2266
+wait disc	minecraft:music_disc_wait	minecraft:record_wait	2267
+trident	minecraft:trident		
+phantom membrane	minecraft:phantom_membrane		
+nautilus shell	minecraft:nautilus_shell		
+heart of the sea	minecraft:heart_of_the_sea		
+water	minecraft:water	minecraft:still_water	9
+lava	minecraft:lava	minecraft:still_lava	11
+tall seagrass	minecraft:tall_seagrass		
+piston head	minecraft:piston_head		34
+moving piston	minecraft:moving_piston		
+wall torch	minecraft:wall_torch	minecraft:torch	
+fire	minecraft:fire		51
+redstone dust	minecraft:redstone_wire		55
+wall sign	minecraft:wall_sign		68
+redstone wall torch	minecraft:redstone_wall_torch		
+nether portal	minecraft:nether_portal	minecraft:portal	90
+attached pumpkin stem	minecraft:attached_pumpkin_stem		
+attached melon stem	minecraft:attached_melon_stem		
+pumpkin stem	minecraft:pumpkin_stem		104
+melon stem	minecraft:melon_stem		105
+end portal	minecraft:end_portal		119
+cocoa	minecraft:cocoa		127
+tripwire	minecraft:tripwire	minecraft:tripwire_hook	132
+potted oak sapling	minecraft:potted_oak_sapling	minecraft:flower_pot	
+potted spruce sapling	minecraft:potted_spruce_sapling	minecraft:flower_pot	
+potted birch sapling	minecraft:potted_birch_sapling	minecraft:flower_pot	
+potted jungle sapling	minecraft:potted_jungle_sapling	minecraft:flower_pot	
+potted acacia sapling	minecraft:potted_acacia_sapling	minecraft:flower_pot	
+potted dark oak sapling	minecraft:potted_dark_oak_sapling	minecraft:flower_pot	
+potted fern	minecraft:potted_fern	minecraft:flower_pot	
+potted dandelion	minecraft:potted_dandelion	minecraft:flower_pot	
+potted poppy	minecraft:potted_poppy	minecraft:flower_pot	
+potted blue orchid	minecraft:potted_blue_orchid	minecraft:flower_pot	
+potted allium	minecraft:potted_allium	minecraft:flower_pot	
+potted azure bluet	minecraft:potted_azure_bluet	minecraft:flower_pot	
+potted red tulip	minecraft:potted_red_tulip	minecraft:flower_pot	
+potted orange tulip	minecraft:potted_orange_tulip	minecraft:flower_pot	
+potted white tulip	minecraft:potted_white_tulip	minecraft:flower_pot	
+potted pink tulip	minecraft:potted_pink_tulip	minecraft:flower_pot	
+potted oxeye daisy	minecraft:potted_oxeye_daisy	minecraft:flower_pot	
+potted red mushroom	minecraft:potted_red_mushroom	minecraft:flower_pot	
+potted brown mushroom	minecraft:potted_brown_mushroom	minecraft:flower_pot	
+potted dead bush	minecraft:potted_dead_bush	minecraft:flower_pot	
+potted cactus	minecraft:potted_cactus	minecraft:flower_pot	
+carrots	minecraft:carrots		141
+potatoes	minecraft:potatoes		142
+skeleton wall skull	minecraft:skeleton_wall_skull	minecraft:skull	
+wither skeleton wall skull	minecraft:wither_skeleton_wall_skull	minecraft:skull	
+zombie wall head	minecraft:zombie_wall_head	minecraft:skull	
+player wall head	minecraft:player_wall_head	minecraft:skull	
+creeper wall head	minecraft:creeper_wall_head	minecraft:skull	
+dragon wall head	minecraft:dragon_wall_head	minecraft:skull	
+white wall banner	minecraft:white_wall_banner		
+orange wall banner	minecraft:orange_wall_banner		
+magenta wall banner	minecraft:magenta_wall_banner		
+light blue wall banner	minecraft:light_blue_wall_banner		
+yellow wall banner	minecraft:yellow_wall_banner		
+lime wall banner	minecraft:lime_wall_banner		
+pink wall banner	minecraft:pink_wall_banner		
+gray wall banner	minecraft:gray_wall_banner		
+light gray wall banner	minecraft:light_gray_wall_banner		
+cyan wall banner	minecraft:cyan_wall_banner		
+purple wall banner	minecraft:purple_wall_banner		
+blue wall banner	minecraft:blue_wall_banner		
+brown wall banner	minecraft:brown_wall_banner		
+green wall banner	minecraft:green_wall_banner		
+red wall banner	minecraft:red_wall_banner		
+black wall banner	minecraft:black_wall_banner		
+beetroots	minecraft:beetroots		207
+end gateway	minecraft:end_gateway		209
+frosted ice	minecraft:frosted_ice		212
+kelp plant	minecraft:kelp_plant		
+dead tube coral wall fan	minecraft:dead_tube_coral_wall_fan		
+dead brain coral wall fan	minecraft:dead_brain_coral_wall_fan		
+dead bubble coral wall fan	minecraft:dead_bubble_coral_wall_fan		
+dead fire coral wall fan	minecraft:dead_fire_coral_wall_fan		
+dead horn coral wall fan	minecraft:dead_horn_coral_wall_fan		
+tube coral wall fan	minecraft:tube_coral_wall_fan		
+brain coral wall fan	minecraft:brain_coral_wall_fan		
+bubble coral wall fan	minecraft:bubble_coral_wall_fan		
+fire coral wall fan	minecraft:fire_coral_wall_fan		
+horn coral wall fan	minecraft:horn_coral_wall_fan		
+void air	minecraft:void_air		
+cave air	minecraft:cave_air		
+bubble column	minecraft:bubble_column		
+creeper spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"creeper"}}}	minecraft:mob_spawner	52:50
+skeleton spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"skeleton"}}}	minecraft:mob_spawner	52:51
+spider spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"spider"}}}	minecraft:mob_spawner	52:52
+giant spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"giant"}}}	minecraft:mob_spawner	52:53
+zombie spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"zombie"}}}	minecraft:mob_spawner	52:54
+slime spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"slime"}}}	minecraft:mob_spawner	52:55
+ghast spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"ghast"}}}	minecraft:mob_spawner	52:56
+pig zombie spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"zombie_pigman"}}}	minecraft:mob_spawner	52:57
+enderman spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"enderman"}}}	minecraft:mob_spawner	52:58
+cave spider spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"cave_spider"}}}	minecraft:mob_spawner	52:59
+silverfish spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"silverfish"}}}	minecraft:mob_spawner	52:60
+blaze spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"blaze"}}}	minecraft:mob_spawner	52:61
+magma cube spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"magma_cube"}}}	minecraft:mob_spawner	52:62
+ender dragon spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"ender_dragon"}}}	minecraft:mob_spawner	52:63
+wither spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"wither"}}}	minecraft:mob_spawner	52:64
+bat spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"bat"}}}	minecraft:mob_spawner	52:65
+witch spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"witch"}}}	minecraft:mob_spawner	52:66
+pig spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"pig"}}}	minecraft:mob_spawner	52:90
+sheep spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"sheep"}}}	minecraft:mob_spawner	52:91
+cow spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"cow"}}}	minecraft:mob_spawner	52:92
+chicken spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"chicken"}}}	minecraft:mob_spawner	52:93
+squid spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"squid"}}}	minecraft:mob_spawner	52:94
+wolf spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"wolf"}}}	minecraft:mob_spawner	52:95
+mooshroom spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"mooshroom"}}}	minecraft:mob_spawner	52:96
+snowman spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"snow_golem"}}}	minecraft:mob_spawner	52:97
+ocelot spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"ocelot"}}}	minecraft:mob_spawner	52:98
+iron golem spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"iron_golem"}}}	minecraft:mob_spawner	52:99
+horse spawner	minecraft:spawner{blockentitytag:{spawndata:{id:"horse"}}}	minecraft:mob_spawner	52:100
+cornflower	minecraft:cornflower		
+lily of the valley	minecraft:lily_of_the_valley		
+wither rose	minecraft:wither_rose		
+smooth stone slab	minecraft:smooth_stone_slab		
+cut sandstone slab	minecraft:cut_sandstone_slab		
+cut red sandstone slab	minecraft:cut_red_sandstone_slab		
+brick wall	minecraft:brick_wall		
+prismarine wall	minecraft:prismarine_wall		
+red sandstone wall	minecraft:red_sandstone_wall		
+mossy stone brick wall	minecraft:mossy_stone_brick_wall		
+granite wall	minecraft:granite_wall		
+stone brick wall	minecraft:stone_brick_wall		
+nether brick wall	minecraft:nether_brick_wall		
+andesite wall	minecraft:andesite_wall		
+red nether brick wall	minecraft:red_nether_brick_wall		
+sandstone wall	minecraft:sandstone_wall		
+end stone brick wall	minecraft:end_stone_brick_wall		
+diorite wall	minecraft:diorite_wall		
+polished granite stairs	minecraft:polished_granite_stairs		
+smooth red sandstone stairs	minecraft:smooth_red_sandstone_stairs		
+mossy stone brick stairs	minecraft:mossy_stone_brick_stairs		
+polished diorite stairs	minecraft:polished_diorite_stairs		
+mossy cobblestone stairs	minecraft:mossy_cobblestone_stairs		
+end stone brick stairs	minecraft:end_stone_brick_stairs		
+stone stairs	minecraft:stone_stairs		
+smooth sandstone stairs	minecraft:smooth_sandstone_stairs		
+smooth quartz stairs	minecraft:smooth_quartz_stairs		
+granite stairs	minecraft:granite_stairs		
+andesite stairs	minecraft:andesite_stairs		
+red nether brick stairs	minecraft:red_nether_brick_stairs		
+polished andesite stairs	minecraft:polished_andesite_stairs		
+diorite stairs	minecraft:diorite_stairs		
+polished granite slab	minecraft:polished_granite_slab		
+smooth red sandstone slab	minecraft:smooth_red_sandstone_slab		
+mossy stone brick slab	minecraft:mossy_stone_brick_slab		
+polished diorite slab	minecraft:polished_diorite_slab		
+mossy cobblestone slab	minecraft:mossy_cobblestone_slab		
+end stone brick slab	minecraft:end_stone_brick_slab		
+smooth sandstone slab	minecraft:smooth_sandstone_slab		
+smooth quartz slab	minecraft:smooth_quartz_slab		
+granite slab	minecraft:granite_slab		
+andesite slab	minecraft:andesite_slab		
+red nether brick slab	minecraft:red_nether_brick_slab		
+polished andesite slab	minecraft:polished_andesite_slab		
+diorite slab	minecraft:diorite_slab		
+scaffolding	minecraft:scaffolding		
+jigsaw block	minecraft:jigsaw		
+composter	minecraft:composter		
+oak sign	minecraft:oak_sign		
+spruce sign	minecraft:spruce_sign		
+birch sign	minecraft:birch_sign		
+jungle sign	minecraft:jungle_sign		
+acacia sign	minecraft:acacia_sign		
+dark oak sign	minecraft:dark_oak_sign		
+bamboo	minecraft:bamboo		
+red dye	minecraft:red_dye		
+green dye	minecraft:green_dye		
+yellow dye	minecraft:yellow_dye		
+blue dye	minecraft:blue_dye		
+brown dye	minecraft:brown_dye		
+black dye	minecraft:black_dye		
+white dye	minecraft:white_dye		
+cat spawn egg	minecraft:cat_spawn_egg		
+fox spawn egg	minecraft:fox_spawn_egg		
+panda spawn egg	minecraft:panda_spawn_egg		
+pillager spawn egg	minecraft:pillager_spawn_egg		
+ravager spawn egg	minecraft:ravager_spawn_egg		
+trader llama spawn egg	minecraft:trader_llama_spawn_egg		
+wandering trader spawn egg	minecraft:wandering_trader_spawn_egg		
+leather horse armor	minecraft:leather_horse_armor		
+crossbow	minecraft:crossbow		
+suspicious stew	minecraft:suspicious_stew		
+loom	minecraft:loom		
+banner pattern	minecraft:flower_banner_pattern		
+banner pattern	minecraft:creeper_banner_pattern		
+banner pattern	minecraft:skull_banner_pattern		
+banner pattern	minecraft:mojang_banner_pattern		
+banner pattern	minecraft:globe_banner_pattern		
+barrel	minecraft:barrel		
+smoker	minecraft:smoker		
+blast furnace	minecraft:blast_furnace		
+cartography table	minecraft:cartography_table		
+fletching table	minecraft:fletching_table		
+grindstone	minecraft:grindstone		
+lectern	minecraft:lectern		
+smithing table	minecraft:smithing_table		
+stonecutter	minecraft:stonecutter		
+bell	minecraft:bell		
+lantern	minecraft:lantern		
+sweet berries	minecraft:sweet_berries		
+campfire	minecraft:campfire		
+bee spawn egg	minecraft:bee_spawn_egg		
+honeycomb	minecraft:honeycomb		
+bee nest	minecraft:bee_nest		
+beehive	minecraft:beehive		
+honey bottle	minecraft:honey_bottle		
+honey block	minecraft:honey_block		
+honeycomb block	minecraft:honeycomb_block		
+oak wall sign	minecraft:oak_wall_sign		
+spruce wall sign	minecraft:spruce_wall_sign		
+birch wall sign	minecraft:birch_wall_sign		
+acacia wall sign	minecraft:acacia_wall_sign		
+jungle wall sign	minecraft:jungle_wall_sign		
+dark oak wall sign	minecraft:dark_oak_wall_sign		
+potted cornflower	minecraft:potted_cornflower		
+potted lily of the valley	minecraft:potted_lily_of_the_valley		
+potted wither rose	minecraft:potted_wither_rose		
+bamboo sapling	minecraft:bamboo_sapling		
+potted bamboo	minecraft:potted_bamboo		
+sweet berry bush	minecraft:sweet_berry_bush		
+crimson nylium	minecraft:crimson_nylium		
+warped nylium	minecraft:warped_nylium		
+crimson planks	minecraft:crimson_planks		
+warped planks	minecraft:warped_planks		
+nether gold ore	minecraft:nether_gold_ore		
+crimson stem	minecraft:crimson_stem		
+warped stem	minecraft:warped_stem		
+stripped crimson stem	minecraft:stripped_crimson_stem		
+stripped warped stem	minecraft:stripped_warped_stem		
+stripped crimson hyphae	minecraft:stripped_crimson_hyphae		
+stripped warped hyphae	minecraft:stripped_warped_hyphae		
+crimson hyphae	minecraft:crimson_hyphae		
+warped hyphae	minecraft:warped_hyphae		
+crimson fungus	minecraft:crimson_fungus		
+warped fungus	minecraft:warped_fungus		
+crimson roots	minecraft:crimson_roots		
+warped roots	minecraft:warped_roots		
+nether sprouts	minecraft:nether_sprouts		
+weeping vines	minecraft:weeping_vines		
+twisting vines	minecraft:twisting_vines		
+crimson slab	minecraft:crimson_slab		
+warped slab	minecraft:warped_slab		
+crimson pressure plate	minecraft:crimson_pressure_plate		
+warped pressure plate	minecraft:warped_pressure_plate		
+polished blackstone pressure plate	minecraft:polished_blackstone_pressure_plate		
+crimson fence	minecraft:crimson_fence		
+warped fence	minecraft:warped_fence		
+soul soil	minecraft:soul_soil		
+basalt	minecraft:basalt		
+polished basalt	minecraft:polished_basalt		
+soul torch	minecraft:soul_torch		
+crimson trapdoor	minecraft:crimson_trapdoor		
+warped trapdoor	minecraft:warped_trapdoor		
+chain	minecraft:chain		
+crimson fence gate	minecraft:crimson_fence_gate		
+warped fence gate	minecraft:warped_fence_gate		
+cracked nether bricks	minecraft:cracked_nether_bricks		
+chiseled nether bricks	minecraft:chiseled_nether_bricks		
+crimson stairs	minecraft:crimson_stairs		
+warped stairs	minecraft:warped_stairs		
+blackstone wall	minecraft:blackstone_wall		
+polished blackstone wall	minecraft:polished_blackstone_wall		
+polished blackstone brick wall	minecraft:polished_blackstone_brick_wall		
+crimson button	minecraft:crimson_button		
+warped button	minecraft:warped_button		
+polished blackstone button	minecraft:polished_blackstone_button		
+quartz bricks	minecraft:quartz_bricks		
+warped wart block	minecraft:warped_wart_block		
+crimson door	minecraft:crimson_door		
+warped door	minecraft:warped_door		
+netherite ingot	minecraft:netherite_ingot		
+netherite scrap	minecraft:netherite_scrap		
+netherite sword	minecraft:netherite_sword		
+netherite shovel	minecraft:netherite_shovel		
+netherite pickaxe	minecraft:netherite_pickaxe		
+netherite axe	minecraft:netherite_axe		
+netherite hoe	minecraft:netherite_hoe		
+netherite helmet	minecraft:netherite_helmet		
+netherite chestplate	minecraft:netherite_chestplate		
+netherite leggings	minecraft:netherite_leggings		
+netherite boots	minecraft:netherite_boots		
+crimson sign	minecraft:crimson_sign		
+warped sign	minecraft:warped_sign		
+hoglin spawn egg	minecraft:hoglin_spawn_egg		
+piglin spawn egg	minecraft:piglin_spawn_egg		
+strider spawn egg	minecraft:strider_spawn_egg		
+zoglin spawn egg	minecraft:zoglin_spawn_egg		
+zombified piglin spawn egg	minecraft:zombified_piglin_spawn_egg		
+warped fungus on a stick	minecraft:warped_fungus_on_a_stick		
+music disc	minecraft:music_disc_pigstep		
+banner pattern	minecraft:piglin_banner_pattern		
+soul lantern	minecraft:soul_lantern		
+soul campfire	minecraft:soul_campfire		
+shroomlight	minecraft:shroomlight		
+lodestone	minecraft:lodestone		
+block of netherite	minecraft:netherite_block		
+ancient debris	minecraft:ancient_debris		
+target	minecraft:target		
+crying obsidian	minecraft:crying_obsidian		
+blackstone	minecraft:blackstone		
+blackstone slab	minecraft:blackstone_slab		
+blackstone stairs	minecraft:blackstone_stairs		
+gilded blackstone	minecraft:gilded_blackstone		
+polished blackstone	minecraft:polished_blackstone		
+polished blackstone slab	minecraft:polished_blackstone_slab		
+polished blackstone stairs	minecraft:polished_blackstone_stairs		
+chiseled polished blackstone	minecraft:chiseled_polished_blackstone		
+polished blackstone bricks	minecraft:polished_blackstone_bricks		
+polished blackstone brick slab	minecraft:polished_blackstone_brick_slab		
+polished blackstone brick stairs	minecraft:polished_blackstone_brick_stairs		
+cracked polished blackstone bricks	minecraft:cracked_polished_blackstone_bricks		
+respawn anchor	minecraft:respawn_anchor		
+soul fire	minecraft:soul_fire		
+soul wall torch	minecraft:soul_wall_torch		
+weeping vines plant	minecraft:weeping_vines_plant		
+twisting vines plant	minecraft:twisting_vines_plant		
+crimson wall sign	minecraft:crimson_wall_sign		
+warped wall sign	minecraft:warped_wall_sign		
+potted crimson fungus	minecraft:potted_crimson_fungus		
+potted warped fungus	minecraft:potted_warped_fungus		
+potted crimson roots	minecraft:potted_crimson_roots		
+potted warped roots	minecraft:potted_warped_roots		
+block of amethyst	minecraft:amethyst_block		
+amethyst bud	minecraft:amethyst_bud		
+amethyst cluster	minecraft:amethyst_cluster		
+amethyst shard	minecraft:amethyst_shard		
+bucket of axolotl	minecraft:axolotl_bucket		
+axolotl spawn egg	minecraft:axolotl_spawn_egg		
+azalea	minecraft:azalea		
+azalea leaves	minecraft:azalea_leaves		
+big dripleaf	minecraft:big_dripleaf		
+black candle	minecraft:black_candle		
+blue candle	minecraft:blue_candle		
+broken elytra	minecraft:broken_elytra		
+brown candle	minecraft:brown_candle		
+budding amethyst	minecraft:budding_amethyst		
+bundle	minecraft:bundle		
+filled bundle	minecraft:bundle_filled		
+calcite	minecraft:calcite		
+candle	minecraft:candle		
+chiseled deepslate	minecraft:chiseled_deepslate		
+cobbled deepslate	minecraft:cobbled_deepslate		
+cobbled deepslate slab	minecraft:cobbled_deepslate_slab		
+cobbled deepslate stairs	minecraft:cobbled_deepslate_stairs		
+cobbled deepslate wall	minecraft:cobbled_deepslate_wall		
+block of copper	minecraft:copper_block		
+copper ingot	minecraft:copper_ingot		
+copper ore	minecraft:copper_ore		
+cracked deepslate bricks	minecraft:cracked_deepslate_bricks		
+cracked deepslate tiles	minecraft:cracked_deepslate_tiles		
+arrow loaded crossbow	minecraft:crossbow_arrow		
+firework loaded crossbow	minecraft:crossbow_firework		
+cut copper	minecraft:cut_copper		
+cut copper slab	minecraft:cut_copper_slab		
+cut copper stairs	minecraft:cut_copper_stairs		
+cyan candle	minecraft:cyan_candle		
+deepslate	minecraft:deepslate		
+deepslate bricks	minecraft:deepslate_bricks		
+deepslate brick slab	minecraft:deepslate_brick_slab		
+deepslate brick stairs	minecraft:deepslate_brick_stairs		
+deepslate brick wall	minecraft:deepslate_brick_wall		
+deepslate coal ore	minecraft:deepslate_coal_ore		
+deepslate copper ore	minecraft:deepslate_copper_ore		
+deepslate diamond ore	minecraft:deepslate_diamond_ore		
+deepslate emerald ore	minecraft:deepslate_emerald_ore		
+deepslate gold ore	minecraft:deepslate_gold_ore		
+deepslate iron ore	minecraft:deepslate_iron_ore		
+deepslate lapis lazuli ore	minecraft:deepslate_lapis_ore		
+deepslate redstone ore	minecraft:deepslate_redstone_ore		
+deepslate tiles	minecraft:deepslate_tiles		
+deepslate tile slab	minecraft:deepslate_tile_slab		
+deepslate tile stairs	minecraft:deepslate_tile_stairs		
+deepslate tile wall	minecraft:deepslate_tile_wall		
+dirt path	minecraft:dirt_path		
+dripstone block	minecraft:dripstone_block		
+exposed copper	minecraft:exposed_copper		
+exposed cut copper	minecraft:exposed_cut_copper		
+exposed cut copper slab	minecraft:exposed_cut_copper_slab		
+exposed cut copper stairs	minecraft:exposed_cut_copper_stairs		
+flowering azalea	minecraft:flowering_azalea		
+flowering azalea leaves	minecraft:flowering_azalea_leaves		
+glow berries	minecraft:glow_berries		
+glow ink sac	minecraft:glow_ink_sac		
+glow item frame	minecraft:glow_item_frame		
+glow lichen	minecraft:glow_lichen		
+glow squid spawn egg	minecraft:glow_squid_spawn_egg		
+goat spawn egg	minecraft:goat_spawn_egg		
+gray candle	minecraft:gray_candle		
+green candle	minecraft:green_candle		
+hanging roots	minecraft:hanging_roots		
+infested deepslate	minecraft:infested_deepslate		
+large amethyst bud	minecraft:large_amethyst_bud		
+lightning rod	minecraft:lightning_rod		
+light blue candle	minecraft:light_blue_candle		
+light gray candle	minecraft:light_gray_candle		
+lime candle	minecraft:lime_candle		
+magenta candle	minecraft:magenta_candle		
+medium amethyst bud	minecraft:medium_amethyst_bud		
+moss block	minecraft:moss_block		
+moss carpet	minecraft:moss_carpet		
+orange candle	minecraft:orange_candle		
+oxidized copper	minecraft:oxidized_copper		
+oxidized cut copper	minecraft:oxidized_cut_copper		
+oxidized cut copper slab	minecraft:oxidized_cut_copper_slab		
+oxidized cut copper stairs	minecraft:oxidized_cut_copper_stairs		
+piglin brute spawn egg	minecraft:piglin_brute_spawn_egg		
+pink candle	minecraft:pink_candle		
+pointed dripstone	minecraft:pointed_dripstone		
+polished deepslate	minecraft:polished_deepslate		
+polished deepslate slab	minecraft:polished_deepslate_slab		
+polished deepslate stairs	minecraft:polished_deepslate_stairs		
+polished deepslate wall	minecraft:polished_deepslate_wall		
+powder snow bucket	minecraft:powder_snow_bucket		
+purple candle	minecraft:purple_candle		
+raw copper	minecraft:raw_copper		
+block of raw copper	minecraft:raw_copper_block		
+raw gold	minecraft:raw_gold		
+block of raw gold	minecraft:raw_gold_block		
+raw iron	minecraft:raw_iron		
+block of raw iron	minecraft:raw_iron_block		
+red candle	minecraft:red_candle		
+rooted dirt	minecraft:rooted_dirt		
+sculk sensor	minecraft:sculk_sensor		
+small amethyst bud	minecraft:small_amethyst_bud		
+small dripleaf	minecraft:small_dripleaf		
+smooth basalt	minecraft:smooth_basalt		
+spore blossom	minecraft:spore_blossom		
+spyglass	minecraft:spyglass		
+tinted glass	minecraft:tinted_glass		
+tuff	minecraft:tuff		
+waxed block of copper	minecraft:waxed_copper_block		
+waxed cut copper	minecraft:waxed_cut_copper		
+waxed cut copper slab	minecraft:waxed_cut_copper_slab		
+waxed cut copper stairs	minecraft:waxed_cut_copper_stairs		
+waxed exposed copper	minecraft:waxed_exposed_copper		
+waxed exposed cut copper	minecraft:waxed_exposed_cut_copper		
+waxed exposed cut copper slab	minecraft:waxed_exposed_cut_copper_slab		
+waxed exposed cut copper stairs	minecraft:waxed_exposed_cut_copper_stairs		
+waxed oxidized copper	minecraft:waxed_oxidized_copper		
+waxed oxidized cut copper	minecraft:waxed_oxidized_cut_copper		
+waxed oxidized cut copper slab	minecraft:waxed_oxidized_cut_copper_slab		
+waxed oxidized cut copper stairs	minecraft:waxed_oxidized_cut_copper_stairs		
+waxed weathered copper	minecraft:waxed_weathered_copper		
+waxed weathered cut copper	minecraft:waxed_weathered_cut_copper		
+waxed weathered cut copper slab	minecraft:waxed_weathered_cut_copper_slab		
+waxed weathered cut copper stairs	minecraft:waxed_weathered_cut_copper_stairs		
+weathered copper	minecraft:weathered_copper		
+weathered cut copper	minecraft:weathered_cut_copper		
+weathered cut copper slab	minecraft:weathered_cut_copper_slab		
+weathered cut copper stairs	minecraft:weathered_cut_copper_stairs		
+white candle	minecraft:white_candle		
+yellow candle	minecraft:yellow_candle		
+otherside disc	minecraft:music_disc_otherside		
