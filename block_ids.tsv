@@ -1,5 +1,14 @@
 name	item id	legacy item id	numerical id
-air	minecraft:air		
+dark oak door block	minecraft:dark_oak_door	minecraft:dark_oak_door	197
+Oak Door Block	minecraft:wooden_door	minecraft:wooden_door	64
+Stone Slab	minecraft:stone_slab	minecraft:stone_slab	44
+Flower Pot	minecraft:flower_pot	minecraft:flower_pot	140
+			
+			
+			
+			
+			
+air	minecraft:air		0
 stone	minecraft:stone		1
 granite	minecraft:granite	minecraft:stone	1:1
 polished granite	minecraft:polished_granite	minecraft:stone	1:2
@@ -71,6 +80,7 @@ sandstone	minecraft:sandstone		24
 chiseled sandstone	minecraft:chiseled_sandstone	minecraft:sandstone	24:1
 cut sandstone	minecraft:cut_sandstone	minecraft:sandstone	24:2
 note block	minecraft:note_block	minecraft:noteblock	25
+bed	minecraft:bed	minecraft:bed	26
 powered rail	minecraft:powered_rail	minecraft:golden_rail	27
 detector rail	minecraft:detector_rail		28
 sticky piston	minecraft:sticky_piston		29
