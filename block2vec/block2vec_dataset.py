@@ -7,6 +7,8 @@ from loguru import logger
 import numpy as np
 from tqdm import tqdm
 
+import sys
+sys.path.append(os.path.abspath(".."))
 from PyAnvilEditor.pyanvil import World
 from torch.utils.data.dataset import Dataset
 
@@ -60,8 +62,7 @@ class Block2VecDataset(Dataset):
 
     def _read_blocks(self):
         self.block_frequency = defaultdict(int)
-        coordinates = [(x, y, z) for x, y, z in product(range(self.x_lims[0], self.x_lims[1] + 1),
-                                                        range(self.y_lims[0], self.y_lims[1] + 1), range(self.z_lims[0], self.z_lims[1] + 1))]
+        coordinates = [(x, y, z) for x, y, z in product(range(self.x_lims[0], self.x_lims[1] + 1), range(self.y_lims[0], self.y_lims[1] + 1), range(self.z_lims[0], self.z_lims[1] + 1))]
         logger.info("Collecting {} blocks", len(self))
         for name in tqdm([self._get_block(*coord) for coord in coordinates]):
             self.block_frequency[name] += 1

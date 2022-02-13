@@ -1,12 +1,10 @@
 import os
 import sys
-sys.path.append(os.path.join(os.path.abspath(
-    os.path.dirname(__file__)), "..", ".."))
 
 from typing import Tuple
 
 import pytorch_lightning as pl
-from minecraft.block2vec.block2vec import Block2Vec, Block2VecArgs
+from block2vec import Block2Vec, Block2VecArgs
 from tap import Tap
 
 

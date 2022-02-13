@@ -14,9 +14,9 @@ from loguru import logger
 from matplotlib import pyplot as plt
 from matplotlib import rcParams
 from matplotlib.font_manager import FontProperties
-from minecraft.block2vec.block2vec_dataset import Block2VecDataset
-from minecraft.block2vec.image_annotations_3d import ImageAnnotations3D
-from minecraft.block2vec.skip_gram_model import SkipGramModel
+from block2vec_dataset import Block2VecDataset
+from image_annotations_3d import ImageAnnotations3D
+from skip_gram_model import SkipGramModel
 from sklearn.metrics import ConfusionMatrixDisplay
 from tap import Tap
 from torch.utils.data import DataLoader
@@ -36,16 +36,7 @@ sub_coord_dict = dict(
 
 
 class Block2VecArgs(Tap):
-    input_world_path: str = os.path.abspath(
-        os.path.join(
-            os.path.dirname(__file__),
-            "..",
-            "..",
-            "..",
-            "minecraft_worlds",
-            "Drehmal v2.1 PRIMORDIAL",
-        )
-    )
+    input_world_path: str = '../dataset/minecraft_worlds/Drehmal v2.1.1 PRIMORDIAL'
     output_path: str = os.path.join("output", "block2vec")
     emb_dimension: int = 32
     epochs: int = 30
@@ -57,16 +48,7 @@ class Block2VecArgs(Tap):
     neighbor_radius: int = 1
 
     def process_args(self) -> None:
-        coords = load_pkl(
-            "/primordial_coords_dict",
-            os.path.join(
-                os.path.abspath(os.path.dirname(__file__)),
-                "..",
-                "..",
-                "input",
-                "minecraft",
-            ),
-        )
+        coords = load_pkl("primordial_coords_dict", '')
         self.sub_coords = sub_coord_dict[self.input_area_name]
         self.coords = []
         tmp_coords = coords[self.input_area_name]
