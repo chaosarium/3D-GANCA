@@ -8,3 +8,6 @@ dataset/matplotlib notebook.ipynb
 dataset/.ipynb_checkpoints
 __pycache__
 runs
+lightning_logs
+output/block2vec
+block2vec/output/block2vec
