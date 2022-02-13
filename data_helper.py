@@ -47,7 +47,10 @@ def center_and_pad_world(world, min_size=None):
 
 def get_filtered_stats_df():
     # load filtered houses
-    filtered_df = pd.read_pickle("dataset/filtered_houses_stats.pkl")
+    try:
+        filtered_df = pd.read_pickle("dataset/filtered_houses_stats.pkl")
+    except:
+        filtered_df = pd.read_pickle("dataset/filtered_houses_stats.pkl4")
     return filtered_df
 
 def all_trainx_as_df():
