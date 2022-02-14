@@ -246,8 +246,8 @@ numerical id	name	item id
 144	Mob Head	minecraft:skull
 145	Anvil	minecraft:anvil
 146	Trapped Chest	minecraft:trapped_chest
-147	Weighted Pressure Plate light)minecraft:light_weighted_pressure_plate
-148	Weighted Pressure Plate heavy)minecraft:heavy_weighted_pressure_plate
+147	Weighted Pressure Plate (light)	minecraft:light_weighted_pressure_plate
+148	Weighted Pressure Plate (heavy)	minecraft:heavy_weighted_pressure_plate
 149	Redstone Comparator inactive)	minecraft:unpowered_comparator
 150	Redstone Comparator active)	minecraft:powered_comparator
 151	Daylight Sensor	minecraft:daylight_detector
