@@ -70,3 +70,15 @@ def all_trainx_as_df():
 
     print('loaded', len(filtered_houses_df), 'houses')
     return filtered_houses_df
+
+def houses_dataset():
+    filtered_df = get_filtered_stats_df()
+    out = []
+    
+    for i, row in tqdm(filtered_df.iterrows(), total=filtered_df.shape[0]):
+        world = center_and_pad_world(trim_world_empty(rearrange_sample(np.load(DATA_DIR + "/" + row['dir'] + "/schematic.npy"))), WORLD_SIZE)
+        out.append(world)
+        
+    print('loaded', len(out), 'houses')
+    return np.array(out)
+# %%
