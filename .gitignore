@@ -11,3 +11,8 @@ runs
 lightning_logs
 output/block2vec
 block2vec/output/block2vec
+output
+dataset/block2vec_preprocessed.npy
+*/.DS_Store
+.DS_Store
+temp.ipynb

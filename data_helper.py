@@ -3,6 +3,7 @@ import numpy as np
 from einops import rearrange
 import pandas as pd
 from tqdm.notebook import tqdm
+import os.path as osp, os, requests, tarfile
 DATA_DIR = "dataset/house_data/houses"
 WORLD_SIZE = 32
 import math
@@ -82,3 +83,29 @@ def houses_dataset():
     print('loaded', len(out), 'houses')
     return np.array(out)
 # %%
+
+def download_dataset():
+    data_dir = 'dataset'
+    url = "https://craftassist.s3-us-west-2.amazonaws.com/pubr/house_data.tar.gz"
+    os.makedirs(data_dir, exist_ok=True)
+
+    tar_path = osp.join(data_dir, "houses.tar.gz")
+    extracted_dir = osp.join(data_dir, "house_data")
+
+    if not (osp.isfile(tar_path) or osp.isdir(extracted_dir)):
+        print(f"Downloading dataset from {url}")
+        response = requests.get(url, allow_redirects=True)
+        if response.status_code != 200:
+            raise RuntimeError(
+                f"Failed to retrieve image from url: {url}. "
+                f"Status: {response.status_code}"
+            )
+        with open(tar_path, "wb") as f:
+            f.write(response.content)
+    else: 
+        print("Dataset already exists")
+
+    if not osp.isdir(extracted_dir):
+        print(f"Extracting dataset to {extracted_dir}")
+        tar = tarfile.open(tar_path, "r")
+        tar.extractall(data_dir)
