@@ -1,4 +1,3 @@
-# %%
 import numpy as np
 from einops import rearrange
 import pandas as pd
@@ -7,8 +6,6 @@ import os.path as osp, os, requests, tarfile
 DATA_DIR = "dataset/house_data/houses"
 WORLD_SIZE = 32
 import math
-
-# %%
 
 def rearrange_sample(house):
     # this rearranges the training sample into an x y z m shape
@@ -82,7 +79,6 @@ def houses_dataset():
         
     print('loaded', len(out), 'houses')
     return np.array(out)
-# %%
 
 def download_dataset():
     data_dir = 'dataset'
@@ -109,3 +105,66 @@ def download_dataset():
         print(f"Extracting dataset to {extracted_dir}")
         tar = tarfile.open(tar_path, "r")
         tar.extractall(data_dir)
+
+from torch.utils.data.dataset import Dataset
+import torch    
+import pytorch_lightning as pl
+from torch.utils.data import DataLoader
+
+class GANCA3DDataModule(pl.LightningDataModule):
+    def __init__(self, 
+            batch_size = 16,
+            num_workers = 0,
+            mcid2block = [], 
+            block2embeddingid = [],
+        ):
+        super().__init__()
+        
+        self.batch_size = batch_size
+        self.dims = (32, 32, 32) # this will be returned when calling this.size()
+        self.num_workers = num_workers
+        self.mcid2block = mcid2block
+        self.block2embeddingid = block2embeddingid
+                
+    def prepare_data(self):
+        # download data
+        download_dataset()
+
+    def setup(self, stage=None):
+        # splitting data and process stuff
+        full_dataset = houses_dataset()[:,:,:,:,0]
+        
+        # Replace all the MC block ids with embedding ids
+        
+        def blockidx2embeddingidx(blockidx):
+            block_name = self.mcid2block[str(blockidx)]
+            embeddingid = self.block2embeddingid[block_name]
+            return embeddingid
+
+        vectorised_blockidx2embeddingidx = np.vectorize(blockidx2embeddingidx)
+        
+        print('Turning MC id into embedding idx. This could take up to a minute.')
+        full_dataset = vectorised_blockidx2embeddingidx(full_dataset)
+        
+        self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [1600, 192, 185])
+        
+    # these funcs can also be placed directly inside a LightningModule
+    def train_dataloader(self):
+        return DataLoader(
+            self.train_dataset,
+            batch_size=self.batch_size,
+            shuffle=True,
+            pin_memory=True,
+            num_workers=self.num_workers,
+        )
+
+    def val_dataloader(self):
+        # return DataLoader(self.val_dataset, batch_size=self.batch_size, pin_memory=True, num_workers=NUM_WORKERS)
+        pass
+
+    def test_dataloader(self):
+        # return DataLoader(self.test_dataset, batch_size=self.batch_size, pin_memory=True, num_workers=NUM_WORKERS)
+        pass
+
+    def predict_dataloader(self):
+        pass
