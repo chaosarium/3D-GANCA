@@ -10,6 +10,10 @@ from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
 import pytorch_lightning as pl
 
+import sys
+from loguru import logger as gurulogger
+gurulogger.level("DEBUG", color="<yellow><bold>")
+
 class VoxelPerceptionNet(nn.Module):
     # Essentially running a trainable perceptor on each layer. This expands the number of channels by a factor of num_perceptions and gives us the visual features to do NCA updates
     
@@ -20,7 +24,7 @@ class VoxelPerceptionNet(nn.Module):
         use_normal_init=True, 
         zero_bias=True
     ):
-        super(VoxelPerceptionNet, self).__init__()
+        super().__init__()
         
         self.num_in_channels = num_in_channels
         self.normal_std = normal_std
@@ -55,6 +59,7 @@ class VoxelPerceptionNet(nn.Module):
                 self.apply(init_weights)
                 
     def forward(self, input):
+        gurulogger.info(f"it's shape {input.shape} coming in to the perception net")
         return self.sequence(input)
     
 class VoxelUpdateNet(nn.Module):
@@ -68,7 +73,7 @@ class VoxelUpdateNet(nn.Module):
         use_normal_init=True,
         zero_bias=True,
     ):
-        super(VoxelUpdateNet, self).__init__()
+        super().__init__()
         
         def make_sequental(num_channels, channel_dims):
                 
@@ -113,6 +118,7 @@ class VoxelUpdateNet(nn.Module):
                 self.apply(init_weights)
 
     def forward(self, x):
+        gurulogger.debug(f"it's shape {x.shape} coming in to the update net")
         return self.update_net(x)
 
 class VoxelNCAModel(nn.Module):
@@ -121,26 +127,29 @@ class VoxelNCAModel(nn.Module):
         cell_fire_rate: float = 0.5, # how often do cells update
         num_perceptions = 3, # num of filters
         perception_requires_grad: bool = True, # if perception filters are trainable
-        num_hidden_channels: int = 127, # num hidden channels
+        num_embedding_channels: int = 64, # number of channels for block embeddings
+        num_hidden_channels: int = 63, # num hidden channels
         normal_std: float = 0.0002, # for initialisation
         use_normal_init: bool = True, # whether to init
         zero_bias: bool = True, # whether to init bias as 0s
         update_net_channel_dims: List[int] = [32, 32], # channel sizes for hidden layers in VoxelUpdateNet
     ):
-        super(VoxelNCAModel, self).__init__()
+        super().__init__()
         self.alpha_living_threshold = alpha_living_threshold
         self.cell_fire_rate = cell_fire_rate
         self.num_perceptions = num_perceptions
         self.perception_requires_grad = perception_requires_grad
+        self.num_embedding_channels = num_embedding_channels
         self.num_hidden_channels = num_hidden_channels
         self.normal_std = normal_std
         self.use_normal_init = use_normal_init
         self.zero_bias = zero_bias
         self.update_net_channel_dims = update_net_channel_dims
         
-        # let's have 1 alpha channel + num_hidden_channels * hidden channels
+        # let's have 1 alpha channel
         self.alpha_channel_index = 0
-        self.num_channels = 1 + self.num_hidden_channels
+        # the channels will be like [alpha, embeddings ... , hiddens ...]
+        self.num_channels = 1 + self.num_embedding_channels + self.num_hidden_channels
         
         self.perception_net = VoxelPerceptionNet(
             num_in_channels = self.num_channels, 
@@ -212,19 +221,23 @@ class VoxelNCAModel(nn.Module):
         # in comes a batch of worlds (N, channels, x, y, z)
         for step in range(steps):
             state, life_mask = self.update(state)
-        if get_final_mask: return state, life_mask
-        return state
+        
+        # return accordingly
+        if get_final_mask: 
+            return state, life_mask
+        else:
+            return state
     
 class VoxelDiscriminator(nn.Module):
     def __init__(self,
             num_in_channels: int = 64, # number f channels to represent a world
             use_sigmoid: bool = False,
         ):
-        super(VoxelDiscriminator, self).__init__()
+        super().__init__()
         
         self.num_in_channels = num_in_channels
         self.use_sigmoid = use_sigmoid
-        
+                
         self.model = nn.Sequential(
             nn.Identity(),
             
@@ -252,10 +265,12 @@ class VoxelDiscriminator(nn.Module):
             nn.Conv3d(512, 1, kernel_size=2, padding=0, stride=1, bias=False),
 
             # # sigmoid for binary classification
-            nn.Flatten(), # make its shape 1
+            nn.Flatten(), # make its shape N, 1
         )
 
     def forward(self, world):
+        out = self.model(world)
         if self.use_sigmoid:
-            world = torch.sigmoid(world)
-        return self.model(world)
+            gurulogger.debug('using sigmoid for discriminator')
+            out = torch.sigmoid(out)
+        return out

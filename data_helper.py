@@ -117,6 +117,7 @@ class GANCA3DDataModule(pl.LightningDataModule):
             num_workers = 0,
             mcid2block = [], 
             block2embeddingid = [],
+            debug = False,
         ):
         super().__init__()
         
@@ -125,6 +126,7 @@ class GANCA3DDataModule(pl.LightningDataModule):
         self.num_workers = num_workers
         self.mcid2block = mcid2block
         self.block2embeddingid = block2embeddingid
+        self.debug = debug
                 
     def prepare_data(self):
         # download data
@@ -132,7 +134,10 @@ class GANCA3DDataModule(pl.LightningDataModule):
 
     def setup(self, stage=None):
         # splitting data and process stuff
-        full_dataset = houses_dataset()[:,:,:,:,0]
+        if not self.debug:
+            full_dataset = houses_dataset()[:,:,:,:,0]
+        else:
+            full_dataset = houses_dataset()[0:16,:,:,:,0] # only take first few examples
         
         # Replace all the MC block ids with embedding ids
         
@@ -146,7 +151,10 @@ class GANCA3DDataModule(pl.LightningDataModule):
         print('Turning MC id into embedding idx. This could take up to a minute.')
         full_dataset = vectorised_blockidx2embeddingidx(full_dataset)
         
-        self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [1600, 192, 185])
+        if not self.debug:
+            self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [1600, 192, 185])
+        else:
+            self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [8, 4, 4])
         
     # these funcs can also be placed directly inside a LightningModule
     def train_dataloader(self):
