@@ -59,7 +59,7 @@ class VoxelPerceptionNet(nn.Module):
                 self.apply(init_weights)
                 
     def forward(self, input):
-        gurulogger.info(f"it's shape {input.shape} coming in to the perception net")
+        # gurulogger.info(f"it's shape {input.shape} coming in to the perception net")
         return self.sequence(input)
     
 class VoxelUpdateNet(nn.Module):
@@ -118,7 +118,7 @@ class VoxelUpdateNet(nn.Module):
                 self.apply(init_weights)
 
     def forward(self, x):
-        gurulogger.debug(f"it's shape {x.shape} coming in to the update net")
+        # gurulogger.debug(f"it's shape {x.shape} coming in to the update net")
         return self.update_net(x)
 
 class VoxelNCAModel(nn.Module):
@@ -208,7 +208,7 @@ class VoxelNCAModel(nn.Module):
         
         # cells are alive if they are alive both before and after update
         life_mask = (pre_update_mask & post_update_mask).float()
-        # make all the dead cells everything zero
+        # make all the dead cells everything zero # TODO replace airs with air embedding instead
         state = state * life_mask
                 
         return state, life_mask
@@ -271,6 +271,6 @@ class VoxelDiscriminator(nn.Module):
     def forward(self, world):
         out = self.model(world)
         if self.use_sigmoid:
-            gurulogger.debug('using sigmoid for discriminator')
+            # gurulogger.debug('using sigmoid for discriminator')
             out = torch.sigmoid(out)
         return out
