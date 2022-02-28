@@ -104,7 +104,7 @@ def download_dataset():
     if not osp.isdir(extracted_dir):
         print(f"Extracting dataset to {extracted_dir}")
         tar = tarfile.open(tar_path, "r")
-        tar.extractall(data_dir)
+        tar.extractall(extracted_dir)
 
 from torch.utils.data.dataset import Dataset
 import torch    
