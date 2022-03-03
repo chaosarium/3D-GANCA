@@ -59,7 +59,6 @@ class VoxelPerceptionNet(nn.Module):
                 self.apply(init_weights)
                 
     def forward(self, input):
-        # gurulogger.info(f"it's shape {input.shape} coming in to the perception net")
         return self.sequence(input)
     
 class VoxelUpdateNet(nn.Module):
@@ -81,14 +80,14 @@ class VoxelUpdateNet(nn.Module):
             sequence = [
                 # visual_feature_channels, x, y, z -> channel_dims[0], x, y, z
                 nn.Conv3d(num_channels * num_perceptions, channel_dims[0], kernel_size=1), 
-                nn.ReLU()
+                nn.LeakyReLU(0.2, inplace=True) # trying leakyrelu here
             ]
             
             # loop through dims[1:] and make Conv3d
             for i in range(1, len(channel_dims)):
                 sequence.extend([
                     nn.Conv3d(channel_dims[i - 1], channel_dims[i], kernel_size=1), 
-                    nn.ReLU()
+                    nn.LeakyReLU(0.2, inplace=True) # trying leakyrelu here
                 ])
                 
             # make final layer
@@ -170,8 +169,6 @@ class VoxelNCAModel(nn.Module):
             use_normal_init = self.use_normal_init, 
             zero_bias = self.zero_bias
         )
-
-        self.tanh = nn.Tanh()
         
     def check_alive(self, state):
         # scan the alpha channel and do a max pooling to get the maximum alpha for the cell's neighbourhood
@@ -208,7 +205,7 @@ class VoxelNCAModel(nn.Module):
         
         # cells are alive if they are alive both before and after update
         life_mask = (pre_update_mask & post_update_mask).float()
-        # make all the dead cells everything zero # TODO replace airs with air embedding instead
+        # make all the dead cells everything zero # TODO train block2vec again so that air block is torch.zeros
         state = state * life_mask
                 
         return state, life_mask
@@ -269,8 +266,8 @@ class VoxelDiscriminator(nn.Module):
         )
 
     def forward(self, world):
-        out = self.model(world)
+        validity = self.model(world)
         if self.use_sigmoid:
             # gurulogger.debug('using sigmoid for discriminator')
-            out = torch.sigmoid(out)
-        return out
+            validity = torch.sigmoid(validity)
+        return validity
