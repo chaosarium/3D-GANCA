@@ -150,6 +150,8 @@ class GANCA3DDataModule(pl.LightningDataModule):
         
         print('Turning MC id into embedding idx. This could take up to a minute.')
         full_dataset = vectorised_blockidx2embeddingidx(full_dataset)
+        print('Done with that.')
+
         
         if not self.debug:
             self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [1600, 192, 185])
