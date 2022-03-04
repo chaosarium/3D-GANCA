@@ -205,7 +205,6 @@ class VoxelNCAModel(nn.Module):
         
         # cells are alive if they are alive both before and after update
         life_mask = (pre_update_mask & post_update_mask).float()
-        # make all the dead cells everything zero # TODO train block2vec again so that air block is torch.zeros
         state = state * life_mask
                 
         return state, life_mask
