@@ -10,7 +10,7 @@ import pandas as pd
 
 def get_embedding_info(data_path):
     '''
-    returns the pytorch embedding object, mcid2block dict, block2embeddingidx dict, and embeddingidx2block dict
+    returns the pytorch embedding object, mcid2block dict, block2embeddingidx dict, and embeddingidx2block dict, and block2mcid dict
     '''
     
     with open(data_path + "representations.pkl", 'rb') as f:
@@ -30,8 +30,14 @@ def get_embedding_info(data_path):
     mc_block_database = mc_block_database.filter(items=['numerical id', 'item id'])
     mc_block_database = mc_block_database.dropna(subset=["numerical id"])
     mcid2block = mc_block_database.set_index('numerical id').to_dict()['item id']
-
-    return embedding, mcid2block, block2embeddingidx, embeddingidx2block
+    
+    block2mcid = mc_block_database.set_index('item id').to_dict()['numerical id']
+    for key in block2mcid:
+        processed_val = block2mcid[key].split(':')
+        # getting rid of meta if there is one. For example 'minecraft:stone': '1:6' will be turned into 'minecraft:stone': '1'
+        block2mcid[key] = int(processed_val[0])
+    
+    return embedding, mcid2block, block2embeddingidx, embeddingidx2block, block2mcid
 
 # %%
 
@@ -80,3 +86,12 @@ def examples2embedding(worlds, embedding):
     embedded = embedding(worlds)
     embedded = rearrange(embedded, 'N x y z c -> N c x y z')
     return embedded
+
+# %%
+
+from sklearn.neighbors import NearestNeighbors
+
+def nearest_neighbors(values, all_values, nbr_neighbors=1):
+    nn = NearestNeighbors(nbr_neighbors, metric='cosine', algorithm='brute').fit(all_values)
+    dists, idxs = nn.kneighbors(values)
+    return dists, idxs

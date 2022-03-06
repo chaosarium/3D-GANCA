@@ -65,3 +65,40 @@ def visualise_world(worlds_data, plots_per_row = 4, figsize = (20, 20)):
             r += 1
 
     plt.show()
+
+def visualise_world_tensor(worlds, plots_per_row = 4, figsize = (20, 20)):
+    '''
+    worlds_data: a long tensor of shape (N, x, y, z)
+    plots_per_row: how many plots in a row, default 4
+    figsize: default (20, 20)
+    '''
+        
+    fontsize = 2 * (figsize[0] / plots_per_row)
+    
+    fig, axs = plt.subplots(math.ceil(len(worlds)/plots_per_row), plots_per_row, figsize = figsize, subplot_kw={"projection": '3d', "adjustable": 'box'})
+    
+    try:
+        _ = axs[0][0]
+    except:
+        axs = [axs] 
+        
+    r, c = 0, 0
+    for i, world in enumerate(tqdm(worlds)):
+
+        (x, y, z) = world.shape
+        blockidarray = world
+
+        color_dict = get_color_dict(np.unique(blockidarray))
+        colors = convert_to_color(blockidarray, color_dict)
+                
+        axs[r][c].set_title(f'generated house {i}', fontsize=fontsize)
+        axs[r][c].voxels(blockidarray, facecolors=colors)
+        c += 1
+        if c == plots_per_row:
+            c = 0
+            r += 1
+
+    return fig
+
+def state_to_graph():
+    pass
