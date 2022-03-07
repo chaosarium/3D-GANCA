@@ -95,3 +95,30 @@ def nearest_neighbors(values, all_values, nbr_neighbors=1):
     nn = NearestNeighbors(nbr_neighbors, metric='cosine', algorithm='brute').fit(all_values)
     dists, idxs = nn.kneighbors(values)
     return dists, idxs
+
+# %%
+
+class DataConverter():
+    def __init__(self,
+            embedding, 
+            mcid2block, 
+            block2embeddingidx, 
+            embeddingidx2block, 
+            block2mcid
+        ) -> None:
+        self.embedding = embedding
+        self.mcid2block = mcid2block
+        self.block2embeddingidx = block2embeddingidx
+        self.embeddingidx2block = embeddingidx2block
+        self.block2mcid = block2mcid
+        
+    def embeddingidx2blockidx(self, embeddingidx):
+        block_name = self.embeddingidx2block[embeddingidx]
+        blockid = self.block2mcid[block_name]
+        return blockid
+
+# %%
+
+def extract_embedding_channels(states, num_embedding_channels):
+    # in comes (N, c, x, y, z) with c containing alpha and hidden channels
+    return states[:, 1:num_embedding_channels+1, :, :, :]

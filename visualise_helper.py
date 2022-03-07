@@ -66,39 +66,78 @@ def visualise_world(worlds_data, plots_per_row = 4, figsize = (20, 20)):
 
     plt.show()
 
-def visualise_world_tensor(worlds, plots_per_row = 4, figsize = (20, 20)):
+def visualise_single_world_tensor(world, ax = None):
     '''
-    worlds_data: a long tensor of shape (N, x, y, z)
-    plots_per_row: how many plots in a row, default 4
-    figsize: default (20, 20)
+    visualizes a single world tensor; returns an axis
+    worlds_data: a long tensor of shape (x, y, z)
     '''
-        
-    fontsize = 2 * (figsize[0] / plots_per_row)
     
-    fig, axs = plt.subplots(math.ceil(len(worlds)/plots_per_row), plots_per_row, figsize = figsize, subplot_kw={"projection": '3d', "adjustable": 'box'})
+    if ax == None:
+        ax = plt.axes(projection='3d', adjustable= 'box')
+            
+    (x, y, z) = world.shape
+    blockidarray = world
+
+    color_dict = get_color_dict(np.unique(blockidarray))
+    colors = convert_to_color(blockidarray, color_dict)
+            
+    ax.set_title(f'generated house')
+    ax.voxels(blockidarray, facecolors=colors)
     
-    try:
-        _ = axs[0][0]
-    except:
-        axs = [axs] 
-        
+    return ax
+
+from einops import rearrange
+import utils
+
+def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, converter_class = None, size_multiplier=4):
+    # input worlds (N, c, x, y ,z); N worlds will be put left-to-right, top-to-bottom on the figure
+    input_dims = world_states.shape # save dims for restoration
+    print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
+    assert n_cols * n_rows == input_dims[0] # make sure col and rows align
+    
+    # flatten
+    world_states = rearrange(world_states, 'N c x y z -> (N x y z) c')
+    
+    _, idxs = utils.nearest_neighbors(
+        values=world_states, 
+        all_values=embedding_tensor,
+        nbr_neighbors=1
+    )
+    
+    # restore
+    idxs = idxs.reshape(input_dims[0], input_dims[2], input_dims[3], input_dims[4])
+    
+    # turn embedding idxs to mc idxs
+    vectorised_embeddingidx2blockidx = np.vectorize(converter_class.embeddingidx2blockidx)
+    idxs = vectorised_embeddingidx2blockidx(idxs)
+    
+    # visualize
+    fig, axs = plt.subplots(n_rows, n_cols, figsize = (n_cols*size_multiplier, n_rows*size_multiplier), dpi=100, subplot_kw={"projection": '3d', "adjustable": 'box'},)
+    
+    for i in range(2):
+        try:
+            _ = axs[0][0]
+        except:
+            axs = [axs] 
+
     r, c = 0, 0
-    for i, world in enumerate(tqdm(worlds)):
-
-        (x, y, z) = world.shape
-        blockidarray = world
-
-        color_dict = get_color_dict(np.unique(blockidarray))
-        colors = convert_to_color(blockidarray, color_dict)
-                
-        axs[r][c].set_title(f'generated house {i}', fontsize=fontsize)
-        axs[r][c].voxels(blockidarray, facecolors=colors)
+    for i, world in enumerate(tqdm(idxs)):
+    
+        visualise_single_world_tensor(world, ax=axs[r][c])
+        
         c += 1
-        if c == plots_per_row:
+        if c == n_cols:
             c = 0
             r += 1
 
     return fig
 
-def state_to_graph():
-    pass
+def fig2rgb_array(fig):
+    canvas = fig.canvas
+    """Adapted from: https://stackoverflow.com/a/21940031/959926"""
+    canvas.draw()
+    buf = np.frombuffer(canvas.tostring_rgb(), dtype=np.uint8)
+    ncols, nrows = canvas.get_width_height()
+    scale = round(math.sqrt(buf.size / 3 / nrows / ncols))
+    return buf.reshape(scale * nrows, scale * ncols, 3)
+
