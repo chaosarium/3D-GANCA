@@ -101,7 +101,7 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
     _, idxs = utils.nearest_neighbors(
         values=world_states, 
         all_values=embedding_tensor,
-        nbr_neighbors=1
+        n_neighbors=1
     )
     
     # restore
