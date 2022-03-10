@@ -118,7 +118,7 @@ def visualise_world_alpha(alpha_channel, ax = None):
 from einops import rearrange
 import utils
 
-def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, converter_class = None, size_multiplier=4):
+def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, converter_class = None, size_multiplier=4, explode = False, trim = False):
     # input worlds (N, c, x, y ,z); N worlds will be put left-to-right, top-to-bottom on the figure
     input_dims = world_states.shape # save dims for restoration
     print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
@@ -129,7 +129,7 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
     
     _, idxs = utils.nearest_neighbors(
         values=world_states, 
-        all_values=embedding_tensor, # TODO don't make air a possible value
+        all_values=embedding_tensor[1:], # removed air embedding
         n_neighbors=1
     )
     
@@ -151,7 +151,13 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
 
     r, c = 0, 0
     for world in tqdm(idxs, desc="3D plots", colour = 'pink', ncols = 1000, leave=False):
-    
+        
+        if explode:
+            world = utils.explode_voxels(world)
+        if trim:
+            arr_slices = tuple(np.s_[curr_arr.min() - 1:curr_arr.max() + 2] for curr_arr in world.nonzero())
+            world = world[arr_slices]
+
         visualise_single_world_tensor(world, ax=axs[r][c])
         
         c += 1
@@ -161,9 +167,7 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
 
     return fig
 
-import data_helper
-
-def alpha_states_to_graphs(alpha_channels, n_cols = 1, n_rows = 1, size_multiplier=4, explode = False):
+def alpha_states_to_graphs(alpha_channels, n_cols = 1, n_rows = 1, size_multiplier=4, explode = False, trim = False):
     # input worlds (N, 1, x, y ,z); N worlds will be put left-to-right, top-to-bottom on the figure
     input_dims = alpha_channels.shape # save dims for restoration
     print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
@@ -181,11 +185,14 @@ def alpha_states_to_graphs(alpha_channels, n_cols = 1, n_rows = 1, size_multipli
     r, c = 0, 0
     for world in tqdm(alpha_channels, desc="3D plots", colour = 'pink', ncols = 1000, leave=False):
     
-        
         world = world[0,:,:,:] # turn (1, x, y, z) to (x, y, z)
 
         if explode:
             world = utils.explode_voxels(world)
+        if trim:
+            arr_slices = tuple(np.s_[curr_arr.min() - 1:curr_arr.max() + 2] for curr_arr in world.nonzero())
+            world = world[arr_slices]
+
         
         visualise_world_alpha(world, ax=axs[r][c])
         
