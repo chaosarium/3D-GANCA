@@ -205,7 +205,19 @@ class VoxelNCAModel(nn.Module):
         
         # cells are alive if they are alive both before and after update
         life_mask = (pre_update_mask & post_update_mask).float()
-        state = state * life_mask
+        ### old: state = state * life_mask
+        # mask everything except the alpha channel
+        state[:, 1:] = state[:, 1:] * life_mask # (live_mask will broadcast)
+        
+        # apply tanh to the alpha channel
+        alpha_slice = state[:, 0:1] # slice out the alpha channel
+        other_states = state[:, 1:] # the rest
+        tuple_of_activated_parts = (
+            torch.tanh(alpha_slice),
+            other_states # do nothing to the other states
+        )
+        state = torch.cat(tuple_of_activated_parts, dim=1) 
+        state
                 
         return state, life_mask
         

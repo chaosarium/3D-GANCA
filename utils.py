@@ -122,3 +122,17 @@ class DataConverter():
 def extract_embedding_channels(states, num_embedding_channels):
     # in comes (N, c, x, y, z) with c containing alpha and hidden channels
     return states[:, 1:num_embedding_channels+1, :, :, :]
+
+    
+def extract_alpha_channels(states):
+    # in comes (N, c, x, y, z) with c containing alpha and hidden channels
+    return states[:, 0:1, :, :, :]
+
+
+# insert nothing between voxels to make middle ones visible (https://terbium.io/2017/12/matplotlib-3d/)
+def explode_voxels(data):
+    shape_arr = np.array(data.shape)
+    size = shape_arr[:3]*2 - 1
+    exploded = np.zeros(np.concatenate([size, shape_arr[3:]]), dtype=data.dtype)
+    exploded[::2, ::2, ::2] = data
+    return exploded

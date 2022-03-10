@@ -81,9 +81,38 @@ def visualise_single_world_tensor(world, ax = None):
     color_dict = get_color_dict(np.unique(blockidarray))
     colors = convert_to_color(blockidarray, color_dict)
             
-    ax.set_title(f'generated house')
+    # ax.set_title(f'generated house')
     ax.voxels(blockidarray, facecolors=colors)
     
+    return ax
+
+import matplotlib as mpl
+
+# reference: https://terbium.io/2017/12/matplotlib-3d/
+def visualise_world_alpha(alpha_channel, ax = None):
+    '''
+    visualizes a single world tensor; returns an axis
+    alpha_channel: a float tensor of shape (x, y, z)
+    '''
+    mycolormap = plt.get_cmap('coolwarm')
+    transparency=0.2
+
+    # adapted https://blog.csdn.net/weixin_39771351/article/details/111293632
+    colorsvalues = np.empty(alpha_channel.shape, dtype=object)
+    for i in range(0,alpha_channel.shape[0]): 
+        for j in range(0,alpha_channel.shape[1]): 
+            for k in range(0,alpha_channel.shape[2]): 
+                relative_value = (alpha_channel[i][j][k]+1)/2 # normalize to [0,1] range
+                tempc = mycolormap(relative_value)
+                colorreal=(tempc[0],tempc[1],tempc[2],transparency)
+                colorsvalues[i][j][k]=colorreal
+    
+    if ax == None:
+        ax = plt.axes(projection='3d', adjustable= 'box')
+        
+    ax.voxels(alpha_channel, facecolors=colorsvalues, edgecolor=None, shade=True,)
+    
+
     return ax
 
 from einops import rearrange
@@ -100,7 +129,7 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
     
     _, idxs = utils.nearest_neighbors(
         values=world_states, 
-        all_values=embedding_tensor,
+        all_values=embedding_tensor, # TODO don't make air a possible value
         n_neighbors=1
     )
     
@@ -121,7 +150,7 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
             axs = [axs] 
 
     r, c = 0, 0
-    for i, world in enumerate(tqdm(idxs)):
+    for world in tqdm(idxs, desc="3D plots", colour = 'pink', ncols = 1000, leave=False):
     
         visualise_single_world_tensor(world, ax=axs[r][c])
         
@@ -131,6 +160,42 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
             r += 1
 
     return fig
+
+import data_helper
+
+def alpha_states_to_graphs(alpha_channels, n_cols = 1, n_rows = 1, size_multiplier=4, explode = False):
+    # input worlds (N, 1, x, y ,z); N worlds will be put left-to-right, top-to-bottom on the figure
+    input_dims = alpha_channels.shape # save dims for restoration
+    print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
+    assert n_cols * n_rows == input_dims[0] # make sure col and rows align
+        
+    # visualize
+    fig, axs = plt.subplots(n_rows, n_cols, figsize = (n_cols*size_multiplier, n_rows*size_multiplier), dpi=100, subplot_kw={"projection": '3d', "adjustable": 'box'},)
+    
+    for i in range(2):
+        try:
+            _ = axs[0][0]
+        except:
+            axs = [axs] 
+
+    r, c = 0, 0
+    for world in tqdm(alpha_channels, desc="3D plots", colour = 'pink', ncols = 1000, leave=False):
+    
+        
+        world = world[0,:,:,:] # turn (1, x, y, z) to (x, y, z)
+
+        if explode:
+            world = utils.explode_voxels(world)
+        
+        visualise_world_alpha(world, ax=axs[r][c])
+        
+        c += 1
+        if c == n_cols:
+            c = 0
+            r += 1
+
+    return fig
+
 
 def fig2rgb_array(fig):
     canvas = fig.canvas
