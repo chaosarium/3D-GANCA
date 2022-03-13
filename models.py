@@ -285,3 +285,46 @@ class VoxelDiscriminator(nn.Module):
             # gurulogger.debug('using sigmoid for discriminator')
             validity = torch.sigmoid(validity)
         return validity
+    
+    
+class VoxelDeconvGenerator(nn.Module):
+    def __init__(self,
+            latent_dim = 512,
+            world_shape = (32,32,32),
+            num_embedding_channels = 64,
+        ):
+        super().__init__()
+        
+        self.latent_dim = latent_dim
+        self.world_shape = world_shape
+        self.num_embedding_channels = num_embedding_channels
+                
+        self.model = nn.Sequential(
+            # in comes noise (N, latent_dim, 1, 1, 1)
+                        
+            # latent_dim, 1, 1, 1 --> 1024, 2, 2, 2
+            nn.ConvTranspose3d(latent_dim, 1024, kernel_size=4, stride=2, padding=1, bias=False),
+            nn.BatchNorm3d(1024),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            # 1024, 2, 2, 2 --> 512, 4, 4, 4
+            nn.ConvTranspose3d(1024, 512, kernel_size=4, stride=2, padding=1, bias=False),
+            nn.BatchNorm3d(512),
+            nn.LeakyReLU(0.2, inplace=True),
+            
+            # 512, 4, 4, 4 --> 256, 8, 8, 8
+            nn.ConvTranspose3d(512, 256, kernel_size=4, stride=2, padding=1, bias=False),
+            nn.BatchNorm3d(256),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            # 256, 8, 8, 8 --> 128, 16, 16, 16 
+            nn.ConvTranspose3d(256, 128, kernel_size=4, stride=2, padding=1, bias=False),
+            nn.BatchNorm3d(128),
+
+            # 128, 16, 16, 16 --> 64, 32, 32, 32 
+            nn.ConvTranspose3d(128, 64, kernel_size=4, stride=2, padding=1, bias=False),            
+            nn.Identity(),
+        )
+
+    def forward(self, noise):
+        return self.model(noise)
