@@ -118,7 +118,7 @@ def visualise_world_alpha(alpha_channel, ax = None):
 from einops import rearrange
 import utils
 
-def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, converter_class = None, size_multiplier=4, explode = False, trim = False):
+def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, converter_class = None, size_multiplier=4, explode = False, trim = False, no_air = False, metric='euclidean'):
     # input worlds (N, c, x, y ,z); N worlds will be put left-to-right, top-to-bottom on the figure
     input_dims = world_states.shape # save dims for restoration
     print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
@@ -127,10 +127,14 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
     # flatten
     world_states = rearrange(world_states, 'N c x y z -> (N x y z) c')
     
+    if no_air:
+        embedding_tensor = embedding_tensor[1:]
+    
     _, idxs = utils.nearest_neighbors(
         values=world_states, 
-        all_values=embedding_tensor[1:], # removed air embedding
-        n_neighbors=1
+        all_values=embedding_tensor,
+        n_neighbors=1,
+        metric = metric
     )
     
     # restore

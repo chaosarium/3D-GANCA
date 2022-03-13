@@ -132,6 +132,7 @@ class VoxelNCAModel(nn.Module):
         use_normal_init: bool = True, # whether to init
         zero_bias: bool = True, # whether to init bias as 0s
         update_net_channel_dims: List[int] = [32, 32], # channel sizes for hidden layers in VoxelUpdateNet
+        dont_mask_alpha = False, # prevent life mask from resetting alpha values
     ):
         super().__init__()
         self.alpha_living_threshold = alpha_living_threshold
@@ -144,6 +145,7 @@ class VoxelNCAModel(nn.Module):
         self.use_normal_init = use_normal_init
         self.zero_bias = zero_bias
         self.update_net_channel_dims = update_net_channel_dims
+        self.dont_mask_alpha = dont_mask_alpha
         
         # let's have 1 alpha channel
         self.alpha_channel_index = 0
@@ -205,9 +207,11 @@ class VoxelNCAModel(nn.Module):
         
         # cells are alive if they are alive both before and after update
         life_mask = (pre_update_mask & post_update_mask).float()
-        ### old: state = state * life_mask
-        # mask everything except the alpha channel
-        state[:, 1:] = state[:, 1:] * life_mask # (live_mask will broadcast)
+        
+        if self.dont_mask_alpha:
+            state[:, 1:] = state[:, 1:] * life_mask # don't reset alpha channel to 0, which might break backprop
+        else:
+            state = state * life_mask
         
         # apply tanh to the alpha channel
         alpha_slice = state[:, 0:1] # slice out the alpha channel
@@ -217,7 +221,6 @@ class VoxelNCAModel(nn.Module):
             other_states # do nothing to the other states
         )
         state = torch.cat(tuple_of_activated_parts, dim=1) 
-        state
                 
         return state, life_mask
         

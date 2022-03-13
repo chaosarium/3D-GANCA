@@ -1,6 +1,3 @@
-# %%
-# Embeddings
-
 import loguru
 import numpy as np
 import torch
@@ -38,8 +35,6 @@ def get_embedding_info(data_path):
         block2mcid[key] = int(processed_val[0])
     
     return embedding, mcid2block, block2embeddingidx, embeddingidx2block, block2mcid
-
-# %%
 
 import math
 
@@ -91,8 +86,8 @@ def examples2embedding(worlds, embedding):
 
 from sklearn.neighbors import NearestNeighbors
 
-def nearest_neighbors(values, all_values, n_neighbors=1):
-    nn = NearestNeighbors(n_neighbors=n_neighbors, metric='cosine', algorithm='brute').fit(all_values)
+def nearest_neighbors(values, all_values, n_neighbors=1, metric='euclidean'):
+    nn = NearestNeighbors(n_neighbors=n_neighbors, metric='euclidean', algorithm='brute').fit(all_values)
     dists, idxs = nn.kneighbors(values)
     return dists, idxs
 
