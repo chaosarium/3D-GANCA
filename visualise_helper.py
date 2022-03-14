@@ -1,3 +1,4 @@
+from typing import Type
 import matplotlib.pyplot as plt
 from matplotlib.colors import rgb2hex
 import math
@@ -5,8 +6,16 @@ from tqdm.notebook import tqdm
 import numpy as np
 import copy
 
+color_dict = None
 
-def get_color_dict(unique_vals):
+def init_color_dict(
+    num_unique_tokens = 453 # (unuque mc block ids, includes air)
+):
+    global color_dict
+    color_dict = gen_color_dict([i for i in range(num_unique_tokens)])
+    print('colordict init success')
+
+def gen_color_dict(unique_vals):
     state = np.random.RandomState(0)
     color_arr = list(state.uniform(0, 1, (len(unique_vals), 3)))
     color_arr = [rgb2hex(color) for color in color_arr]
@@ -14,6 +23,9 @@ def get_color_dict(unique_vals):
     colors = color_arr[: len(unique_vals)] # chop off the last random
     color_dict = {str(unique_vals[i]): colors[i] for i in range(len(unique_vals))} # make string
     return color_dict # return
+
+def get_color_dict():
+    return color_dict
 
 def convert_to_color(arr, color_dict):
     new_arr = copy.deepcopy(arr).astype(object)
@@ -27,6 +39,7 @@ def visualise_world(worlds_data, plots_per_row = 4, figsize = (20, 20)):
     plots_per_row: how many plots in a row, default 4
     figsize: default (20, 20)
     '''
+    init_color_dict()
     
     worlds = worlds_data['world'].to_list()
     dirs = worlds_data['dir'].to_list()
@@ -51,10 +64,10 @@ def visualise_world(worlds_data, plots_per_row = 4, figsize = (20, 20)):
         (x, y, z, b) = world.shape
         blockidarray, blockmetaarray = world[:,:,:,0], world[:,:,:,1]
 
-        color_dict = get_color_dict(np.unique(blockidarray))
+        color_dict = get_color_dict()
         colors = convert_to_color(blockidarray, color_dict)
         
-        meta_color_dict = get_color_dict(np.unique(blockmetaarray))
+        meta_color_dict = get_color_dict()
         edge_colors = convert_to_color(blockmetaarray, meta_color_dict)
         
         axs[r][c].set_title(dirs[i], fontsize=fontsize)
@@ -79,13 +92,26 @@ def visualise_single_world_tensor(world, ax = None):
     blockidarray = world
     # print(blockidarray)
     
-    color_dict = get_color_dict(np.unique(blockidarray))
-    colors = convert_to_color(blockidarray, color_dict)
-    # print(colors)
-            
-    # ax.set_title(f'generated house')
-    ax.voxels(blockidarray, facecolors=colors)
-    
+    color_dict = get_color_dict()
+    try:
+        colors = convert_to_color(blockidarray, color_dict)
+    except:
+        print("can't get colors")
+        print('blockidarray', blockidarray)
+        print('color_dict', color_dict)
+        raise
+
+    try: 
+        ax.voxels(blockidarray, facecolors=colors)
+    except:
+        print("can't make axis")
+        print('blockidarray.shape', blockidarray.shape)
+        print('blockidarray unique', np.unique(blockidarray))
+        print('colors.shape', colors.shape)
+        print('blockidarray', blockidarray)
+        print('colors', colors)
+        raise
+
     return ax
 
 import matplotlib as mpl
@@ -119,11 +145,13 @@ def visualise_world_alpha(alpha_channel, ax = None):
 
 from einops import rearrange
 import utils
+import torch
 
 def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, converter_class = None, size_multiplier=4, explode = False, trim = False, no_air = False, metric='euclidean'):
+    init_color_dict()
     # input worlds (N, c, x, y ,z); N worlds will be put left-to-right, top-to-bottom on the figure
     input_dims = world_states.shape # save dims for restoration
-    print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
+    # print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
     assert n_cols * n_rows == input_dims[0] # make sure col and rows align
     
     # flatten
@@ -136,7 +164,15 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
             n_neighbors=1,
             metric = metric
         )
-        idxs = idxs + 1 # compensate for changed indexes
+        # compensate for changed indexes
+        idxs = idxs + 1
+        # set zeros to air index 0
+        # world_states = torch.tensor(world_states)
+        # idxs = torch.tensor(idxs)
+        
+        mask = 1 - (np.all(world_states == 0,  axis=1) * 1) # (N x y z), 0 for air and 1 for rest
+        # mask = 1 - (torch.all(world_states == 0,  dim=1) * 1) # (N x y z), 0 for air and 1 for rest
+        idxs = (idxs * mask.reshape(idxs.shape))
     else:
         _, idxs = utils.nearest_neighbors(
             values=world_states, 
@@ -162,7 +198,7 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
             axs = [axs] 
 
     r, c = 0, 0
-    for world in tqdm(idxs, desc="3D plots", colour = 'pink', ncols = 1000, leave=False):
+    for world in tqdm(idxs, desc="3D plots", colour = 'pink', ncols = 1000, leave=True):
         
         if explode:
             world = utils.explode_voxels(world)
@@ -182,7 +218,7 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
 def alpha_states_to_graphs(alpha_channels, n_cols = 1, n_rows = 1, size_multiplier=4, explode = False, trim = False):
     # input worlds (N, 1, x, y ,z); N worlds will be put left-to-right, top-to-bottom on the figure
     input_dims = alpha_channels.shape # save dims for restoration
-    print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
+    # print(f"n cols {n_cols}, n rows {n_rows}, input dims {input_dims}")
     assert n_cols * n_rows == input_dims[0] # make sure col and rows align
         
     # visualize
@@ -195,7 +231,7 @@ def alpha_states_to_graphs(alpha_channels, n_cols = 1, n_rows = 1, size_multipli
             axs = [axs] 
 
     r, c = 0, 0
-    for world in tqdm(alpha_channels, desc="3D plots", colour = 'pink', ncols = 1000, leave=False):
+    for world in tqdm(alpha_channels, desc="3D plots", colour = 'pink', ncols = 1000, leave=True):
     
         world = world[0,:,:,:] # turn (1, x, y, z) to (x, y, z)
 
@@ -214,7 +250,6 @@ def alpha_states_to_graphs(alpha_channels, n_cols = 1, n_rows = 1, size_multipli
             r += 1
 
     return fig
-
 
 def fig2rgb_array(fig):
     canvas = fig.canvas

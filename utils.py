@@ -87,7 +87,7 @@ def examples2embedding(worlds, embedding):
 from sklearn.neighbors import NearestNeighbors
 
 def nearest_neighbors(values, all_values, n_neighbors=1, metric='euclidean'):
-    nn = NearestNeighbors(n_neighbors=n_neighbors, metric='euclidean', algorithm='brute').fit(all_values)
+    nn = NearestNeighbors(n_neighbors=n_neighbors, metric=metric, algorithm='brute').fit(all_values)
     dists, idxs = nn.kneighbors(values)
     return dists, idxs
 
