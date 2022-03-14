@@ -77,9 +77,11 @@ def visualise_single_world_tensor(world, ax = None):
             
     (x, y, z) = world.shape
     blockidarray = world
-
+    # print(blockidarray)
+    
     color_dict = get_color_dict(np.unique(blockidarray))
     colors = convert_to_color(blockidarray, color_dict)
+    # print(colors)
             
     # ax.set_title(f'generated house')
     ax.voxels(blockidarray, facecolors=colors)
@@ -128,14 +130,20 @@ def states_to_graphs(world_states, embedding_tensor, n_cols = 1, n_rows = 1, con
     world_states = rearrange(world_states, 'N c x y z -> (N x y z) c')
     
     if no_air:
-        embedding_tensor = embedding_tensor[1:]
-    
-    _, idxs = utils.nearest_neighbors(
-        values=world_states, 
-        all_values=embedding_tensor,
-        n_neighbors=1,
-        metric = metric
-    )
+        _, idxs = utils.nearest_neighbors(
+            values=world_states, 
+            all_values=embedding_tensor[1:],
+            n_neighbors=1,
+            metric = metric
+        )
+        idxs = idxs + 1 # compensate for changed indexes
+    else:
+        _, idxs = utils.nearest_neighbors(
+            values=world_states, 
+            all_values=embedding_tensor,
+            n_neighbors=1,
+            metric = metric
+        )
     
     # restore
     idxs = idxs.reshape(input_dims[0], input_dims[2], input_dims[3], input_dims[4])

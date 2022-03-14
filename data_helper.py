@@ -137,7 +137,7 @@ class GANCA3DDataModule(pl.LightningDataModule):
         if not self.debug:
             full_dataset = houses_dataset()[:,:,:,:,0]
         else:
-            full_dataset = houses_dataset()[0:16,:,:,:,0] # only take first few examples
+            full_dataset = houses_dataset()[0:48,:,:,:,0] # only take first few examples
         
         # Replace all the MC block ids with embedding ids
         
@@ -156,7 +156,7 @@ class GANCA3DDataModule(pl.LightningDataModule):
         if not self.debug:
             self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [1977, 0, 0]) # ideal [1600, 192, 185]
         else:
-            self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [8, 4, 4])
+            self.train_dataset, self.val_dataset, self.test_dataset = torch.utils.data.random_split(full_dataset, [32, 8, 8])
         
     # these funcs can also be placed directly inside a LightningModule
     def train_dataloader(self):
